@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Own Alphabet - Nina Mondockova</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    .project-header { margin-bottom: 40px; }
+    .project-title { font-size: 42px; font-weight: 800; letter-spacing: -1.5px; margin-top: 15px; margin-bottom: 20px; }
+    .project-meta-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; margin-bottom: 60px; }
+    .meta-details { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-top: 1px solid #e5e5e5; padding-top: 20px; }
+    .meta-item label { display: block; font-size: 12px; font-weight: 700; color: #888; margin-bottom: 5px; }
+    .meta-item span { font-size: 15px; font-weight: 600; color: #111; }
+    .pdf-section { border-top: 1px solid #e5e5e5; padding-top: 50px; margin-top: 60px; }
+    .pdf-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+    .pdf-container { width: 100%; height: 800px; border-radius: 12px; overflow: hidden; border: 1px solid #e5e5e5; background-color: #fafafa; }
+    .pdf-container iframe { width: 100%; height: 100%; border: none; }
+    .socials span { cursor: pointer; margin-right: 8px; color: #888; font-weight: 500; transition: color 0.2s ease; }
+    .socials span:hover, .socials span.active-lang { color: #000; font-weight: 800; }
+    @media (max-width: 900px) { .project-meta-grid { grid-template-columns: 1fr; } .pdf-container { height: 500px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+          <h1 class="logo-title">NINA MONDOCKOVA</h1>
+          <p class="logo-sub">GRAPHIC DESIGNER</p>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html"><span class="num">01</span> <span data-sk="PRÁCE" data-en="WORK" data-dk="ARBEJDE">WORK</span></a></li>
+          <li class="active"><a href="print.html"><span class="num">02</span> <span data-sk="TLAČ" data-en="PRINT" data-dk="TRYK">PRINT</span> <span class="dot">•</span></a></li>
+          <li><a href="about.html"><span class="num">03</span> <span data-sk="O MNE" data-en="ABOUT" data-dk="OM">ABOUT</span></a></li>
+          <li><a href="contact.html"><span class="num">04</span> <span data-sk="KONTAKT" data-en="CONTACT" data-dk="KONTAKT">CONTACT</span></a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <p><a href="mailto:nina.mondockova@gmail.com">nina.mondockova@gmail.com</a></p>
+        <p>(+421) 904 482 803</p>
+        <p>Aarhus, DK</p>
+        <div class="socials">
+          <span id="btn-en" onclick="setLanguage('en')" class="active-lang">EN</span>
+          <span id="btn-dk" onclick="setLanguage('dk')">DK</span>
+          <span id="btn-sk" onclick="setLanguage('sk')">SK</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <a href="print.html" class="btn-link" data-sk="&larr; SPÄŤ NA TLAČ" data-en="&larr; BACK TO PRINT" data-dk="&larr; TILBAGE TIL TRYK">&larr; BACK TO PRINT</a>
+
+      <header class="project-header" style="margin-top: 30px;">
+        <p class="tagline" data-sk="TYPOGRAFIA & PÍSMO" data-en="TYPOGRAPHY & TYPE DESIGN" data-dk="TYPOGRAFI & SKRIFTDESIGN">TYPOGRAPHY & TYPE DESIGN</p>
+        <h1 class="project-title">OWN ALPHABET</h1>
+      </header>
+
+      <section class="project-meta-grid">
+        <div>
+          <p class="description" 
+             data-sk="Autorská sada abecedy navrhnutá od základných skíc po finálnu vektorovú podobu. Štúdia tvaroslovia, proporcií písma a jeho aplikácia na tlačové plagáty a vzorníky." 
+             data-en="Custom typeface alphabet designed from original sketches to final vector metrics. A study on letterforms, proportions, and print specimen poster design."
+             data-dk="Specialdesignet alfabet fra de første skitser til de endelige vektorer. Et studie i bogstavformer, proportioner og trykte plakatprøver.">
+            Custom typeface alphabet designed from original sketches to final vector metrics. A study on letterforms, proportions, and print specimen poster design.
+          </p>
+        </div>
+
+        <div class="meta-details">
+          <div class="meta-item">
+            <label data-sk="ROK" data-en="YEAR" data-dk="ÅR">YEAR</label>
+            <span>2022</span>
+          </div>
+          <div class="meta-item">
+            <label data-sk="ROZSAH" data-en="SCOPE" data-dk="OMFANG">SCOPE</label>
+            <span>Type Design, Print Specimen</span>
+          </div>
+          <div class="meta-item">
+            <label data-sk="MANDÁT" data-en="ROLE" data-dk="ROLLE">ROLE</label>
+            <span>Type Designer</span>
+          </div>
+          <div class="meta-item">
+            <label data-sk="DOKUMENT" data-en="DOCUMENT" data-dk="DOKUMENT">DOCUMENT</label>
+            <span>Type Specimen PDF</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="pdf-section">
+        <div class="pdf-header">
+          <div>
+            <h2 style="font-size: 24px; font-weight: 800;" data-sk="VZORNÍK PÍSMA" data-en="TYPE SPECIMEN" data-dk="SKRIFT PRØVE">TYPE SPECIMEN</h2>
+            <p style="color: #666; font-size: 14px; margin-top: 5px;" data-sk="Prelistujte si celú prezentáciu abecedy." data-en="Browse through the complete alphabet PDF." data-dk="Gennemse hele alfabet-PDF'en.">Browse through the complete alphabet PDF.</p>
+          </div>
+          <a href="image/alphabet.pdf" target="_blank" class="btn-link" style="white-space: nowrap;" data-sk="OTVORIŤ PDF &rarr;" data-en="OPEN PDF &rarr;" data-dk="ÅBN PDF &rarr;">OPEN PDF &rarr;</a>
+        </div>
+
+        <div class="pdf-container">
+          <iframe src="image/alphabet.pdf#toolbar=1" title="Own Alphabet Specimen"></iframe>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[data-' + lang + ']');
+      elements.forEach(el => { el.textContent = el.getAttribute('data-' + lang); });
+      document.querySelectorAll('.socials span').forEach(btn => btn.classList.remove('active-lang'));
+      const activeBtn = document.getElementById('btn-' + lang);
+      if (activeBtn) activeBtn.classList.add('active-lang');
+    }
+  </script>
+</body>
+</html>

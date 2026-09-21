@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRUITIQ - Nina Mondockova</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Asymetrické prúdové rozloženie (Editorial Showcase) */
+    .showcase-section {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      margin-top: 50px;
+      margin-bottom: 80px;
+    }
+
+    .showcase-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    /* Striedanie strán */
+    .showcase-row.reverse {
+      flex-direction: row-reverse;
+    }
+
+    /* Zmenšené obaly pre obrázky */
+    .showcase-image-wrapper {
+      flex: 0 1 480px; /* Maximálna šírka obrázka je obmedzená na 480px */
+      max-width: 480px;
+      position: relative;
+    }
+
+    .showcase-image-wrapper img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px; /* Jemnejšie zaoblenie */
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .showcase-image-wrapper img:hover {
+      transform: translateY(-5px);
+    }
+
+    .showcase-text {
+      flex: 0 1 320px; /* Text má kompaktnú šírku */
+    }
+
+    .showcase-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #999;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .showcase-text h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .showcase-text p {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Spodný PDF prehliadač */
+    .full-manual-section {
+      border-top: 1px solid #e5e5e5;
+      padding-top: 50px;
+    }
+
+    .pdf-container {
+      width: 100%;
+      height: 80vh;
+      background-color: #f0f0f0;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .pdf-viewer {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 868px) {
+      .showcase-row, .showcase-row.reverse {
+        flex-direction: column;
+        gap: 25px;
+      }
+      .showcase-image-wrapper, .showcase-text {
+        max-width: 100%;
+        flex: 1 1 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" style="padding: 40px 50px;">
+    
+    <main style="width: 100%;">
+      <a href="index.html" class="btn-link">&larr; BACK TO WORK</a>
+
+      <!-- Hlavička projektu -->
+      <header class="project-header" style="margin-top: 40px; margin-bottom: 50px;">
+        <p class="category">BRANDING, PACKAGING</p>
+        
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin: 15px 0;">
+          <h1 style="font-size: 38px; font-weight: 800; letter-spacing: -1.5px; margin: 0;">FRUITIQ</h1>
+          <a href="image/KI_mondockova_interactive.pdf" download class="btn-link">DOWNLOAD MANUAL (PDF) &darr;</a>
+        </div>
+
+        <p style="max-width: 550px; color: #555; line-height: 1.6; font-size: 14px;">
+          Delivery of exotic fruits from all over the world. A identity system built around vibrant organic forms and clean typography.
+        </p>
+      </header>
+
+      <!-- Náhľady so zmenšenou veľkosťou -->
+      <section class="showcase-section">
+        
+        <div class="showcase-row">
+          <div class="showcase-image-wrapper">
+            <img src="image/KI_mondockova_interactive/0001.jpg" alt="Visual Identity" />
+          </div>
+          <div class="showcase-text">
+            <span class="showcase-num">01 / CONCEPT</span>
+            <h3>Visual Identity & Grid</h3>
+            <p>Definition of the primary brand mark and structural layout system created to bring consistency across print and digital media.</p>
+          </div>
+        </div>
+
+        <div class="showcase-row reverse">
+          <div class="showcase-image-wrapper">
+            <img src="image/KI_mondockova_interactive/0014.jpg" alt="Color System" />
+          </div>
+          <div class="showcase-text">
+            <span class="showcase-num">02 / PALETTE</span>
+            <h3>Exotic Color Palette</h3>
+            <p>Vibrant tones directly inspired by rare tropical fruits, balanced with clean neutral backgrounds for editorial feel.</p>
+          </div>
+        </div>
+
+        <div class="showcase-row">
+          <div class="showcase-image-wrapper">
+            <img src="image/KI_mondockova_interactive/0021.jpg" alt="Brand Merchandise" />
+          </div>
+          <div class="showcase-text">
+            <span class="showcase-num">03 / MERCHANDISE</span>
+            <h3>Branded Apparel & Accessories</h3>
+            <p>Custom tote bags, eco-friendly apparel, and promotional merchandise featuring the vibrant FruitIQ branding elements.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Spodný PDF prehliadač -->
+      <section class="full-manual-section">
+        <h2 style="font-size: 22px; font-weight: 700; letter-spacing: -0.5px;">COMPLETE DESIGN MANUAL</h2>
+        <p style="color: #666; font-size: 13px; margin-top: 6px;">Explore all 60 pages of brand guidelines directly below.</p>
+        
+        <div class="pdf-container">
+          <iframe 
+            src="image/KI_mondockova_interactive.pdf#toolbar=1&navpanes=0" 
+            class="pdf-viewer"
+            title="Fruitiq Design Manual">
+          </iframe>
+        </div>
+      </section>
+
+    </main>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

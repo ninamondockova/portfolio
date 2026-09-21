@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Nina Mondockova - Graphic Designer</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    .socials span {
+      cursor: pointer;
+      margin-right: 8px;
+      color: #888;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .socials span:hover,
+    .socials span.active-lang {
+      color: #000;
+      font-weight: 800;
+    }
+
+    /* Zaoblenie rohov pre obrázky */
+    .featured-image img {
+      border-radius: 16px;
+      overflow: hidden;
+      display: block;
+      width: 100%;
+    }
+
+    .img-wrapper {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .img-wrapper img {
+      border-radius: 12px;
+      display: block;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="brand">
+        <a href="index.html">
+          <h1 class="logo-title">NINA MONDOCKOVA</h1>
+          <p class="logo-sub">GRAPHIC DESIGNER</p>
+        </a>
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav class="nav">
+        <ul>
+
+          <li class="active">
+            <a href="index.html">
+              <span class="num">01</span>
+              <span
+                data-sk="PRÁCE"
+                data-en="WORK"
+                data-dk="ARBEJDE">
+                WORK
+              </span>
+              <span class="dot">•</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="about.html">
+              <span class="num">02</span>
+              <span
+                data-sk="O MNE"
+                data-en="ABOUT"
+                data-dk="OM">
+                ABOUT
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html">
+              <span class="num">03</span>
+              <span
+                data-sk="KONTAKT"
+                data-en="CONTACT"
+                data-dk="KONTAKT">
+                CONTACT
+              </span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- SIDEBAR FOOTER -->
+      <div class="sidebar-footer">
+
+        <p>
+          <a href="mailto:nina.mondockova@gmail.com">
+            nina.mondockova@gmail.com
+          </a>
+        </p>
+
+        <p>(+421) 904 482 803</p>
+        <p>Aarhus, DK</p>
+
+        <div class="socials">
+          <span
+            id="btn-en"
+            onclick="setLanguage('en')"
+            class="active-lang">
+            EN
+          </span>
+
+          <span
+            id="btn-dk"
+            onclick="setLanguage('dk')">
+            DK
+          </span>
+
+          <span
+            id="btn-sk"
+            onclick="setLanguage('sk')">
+            SK
+          </span>
+        </div>
+
+      </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero-grid">
+
+        <!-- HERO TEXT -->
+        <div class="hero-text">
+
+          <p
+            class="tagline"
+            data-sk="TVORIŤ + RIEŠIŤ + POSÚVAŤ"
+            data-en="CREATE + SOLVE + ELEVATE"
+            data-dk="SKABE + LØSE + LØFTE">
+            CREATE + SOLVE + ELEVATE
+          </p>
+
+          <h2
+            class="hero-title"
+            data-sk="DIZAJN, KTORÝ SPÁJA™"
+            data-en="DESIGN THAT CONNECTS™"
+            data-dk="DESIGN DER FORBINDER™">
+            DESIGN THAT CONNECTS™
+          </h2>
+
+          <p
+            class="description"
+            data-sk="Som slovenská grafická dizajnérka so špecializáciou na branding, obalový dizajn, tlač, UI/UX a sociálne siete."
+            data-en="I'm a Slovak graphic designer specializing in branding, packaging, print, UI/UX and social media."
+            data-dk="Jeg er en slovakisk grafisk designer, der har specialiseret sig i branding, emballage, print, UI/UX og sociale medier.">
+            I'm a Slovak graphic designer specializing in branding, packaging, print, UI/UX and social media.
+          </p>
+
+          <a
+            href="#projects"
+            class="btn-link"
+            data-sk="ZOBRAZIŤ VŠETKY PRÁCE"
+            data-en="VIEW ALL WORK"
+            data-dk="SE ALT ARBEJDE">
+            VIEW ALL WORK
+          </a>
+
+        </div>
+
+
+        <!-- FEATURED IMAGE -->
+        <div class="featured-image">
+          <a href="fruitiq.html">
+            <img
+              src="image/KI_mondockova_interactive/0001.jpg"
+              alt="Fruitiq - exotic fruit branding">
+          </a>
+        </div>
+
+
+        <!-- FEATURED INFO -->
+        <div class="featured-info">
+
+          <p
+            class="category"
+            data-sk="VYBRANÝ PROJEKT"
+            data-en="FEATURED PROJECT"
+            data-dk="UDVALGT PROJEKT">
+            FEATURED PROJECT
+          </p>
+
+          <h3>BRANDING &amp; PACKAGING</h3>
+
+          <p
+            class="project-desc"
+            data-sk="Doručovanie exotického ovocia z celého sveta."
+            data-en="Delivery of exotic fruits from all over the world."
+            data-dk="Levering af eksotiske frugter fra hele verden.">
+            Delivery of exotic fruits from all over the world.
+          </p>
+
+          <a
+            href="fruitiq.html"
+            class="project-link">
+
+            <span
+              data-sk="ZOBRAZIŤ PROJEKT"
+              data-en="VIEW PROJECT"
+              data-dk="SE PROJEKT">
+              VIEW PROJECT
+            </span>
+
+            &rarr;
+
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- PROJECTS -->
+      <section id="projects" class="projects-grid">
+
+
+        <!-- PRINT -->
+        <a
+          href="print.html"
+          class="project-card">
+
+          <div class="img-wrapper">
+            <img
+              src="image/katalog.jpg"
+              alt="Nutrivictus Print">
+          </div>
+
+          <div class="card-meta">
+
+            <div>
+              <span class="card-cat">
+                NUTRIVICTUS
+              </span>
+
+              <h4 class="card-title">
+                PRINT
+              </h4>
+            </div>
+
+            <span class="arrow">
+              &rarr;
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- UI / UX -->
+        <a
+          href="uxui.html"
+          class="project-card">
+
+          <div class="img-wrapper">
+            <img
+              src="image/mrazima.jpg"
+              alt="MraziMa UI/UX">
+          </div>
+
+          <div class="card-meta">
+
+            <div>
+              <span class="card-cat">
+                POKED
+              </span>
+
+              <h4 class="card-title">
+                UI/UX
+              </h4>
+            </div>
+
+            <span class="arrow">
+              &rarr;
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- BRANDING -->
+        <a
+          href="branding.html"
+          class="project-card">
+
+          <div class="img-wrapper">
+            <img
+              src="image/smiechko.jpg"
+              alt="Smiechko Branding">
+          </div>
+
+          <div class="card-meta">
+
+            <div>
+              <span class="card-cat">
+                SMIECHKO
+              </span>
+
+              <h4 class="card-title">
+                BRANDING
+              </h4>
+            </div>
+
+            <span class="arrow">
+              &rarr;
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <!-- INTERNSHIP -->
+        <a
+          href="internship.html"
+          class="project-card">
+
+          <div class="img-wrapper">
+            <img
+              src="image/banner3.png"
+              alt="Super Zoo Internship">
+          </div>
+
+          <div class="card-meta">
+
+            <div>
+              <span class="card-cat">
+                SUPER ZOO
+              </span>
+
+              <h4
+                class="card-title"
+                data-sk="STÁŽ"
+                data-en="INTERNSHIP"
+                data-dk="PRAKTIK">
+                INTERNSHIP
+              </h4>
+
+            </div>
+
+            <span class="arrow">
+              &rarr;
+            </span>
+
+          </div>
+
+        </a>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- LANGUAGE SCRIPT -->
+  <script>
+    function setLanguage(lang) {
+
+      const elements = document.querySelectorAll(
+        '[data-' + lang + ']'
+      );
+
+      elements.forEach(el => {
+        el.textContent =
+          el.getAttribute('data-' + lang);
+      });
+
+
+      document
+        .querySelectorAll('.socials span')
+        .forEach(btn => {
+          btn.classList.remove('active-lang');
+        });
+
+
+      const activeBtn =
+        document.getElementById('btn-' + lang);
+
+      if (activeBtn) {
+        activeBtn.classList.add('active-lang');
+      }
+
+    }
+  </script>
+
+</body>
+</html>

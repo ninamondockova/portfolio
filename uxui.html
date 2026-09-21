@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI/UX Projects - Nina Mondockova</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Špecifické štýly pre mriežku kategórie */
+    .category-header {
+      margin-bottom: 50px;
+    }
+
+    .category-title {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .projects-list-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px 25px;
+    }
+
+    .project-card-full {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .project-card-full .img-wrapper {
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+      background-color: #e5e5e5;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .project-card-full img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card-full:hover img {
+      transform: scale(1.04);
+    }
+
+    @media (max-width: 1024px) {
+      .projects-list-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .projects-list-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Ľavý panel / Navigácia -->
+    <aside class="sidebar">
+      <div class="brand">
+        <h1 class="logo-title">NINA MONDOCKOVA</h1>
+        <p class="logo-sub">GRAPHIC DESIGNER</p>
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html"><span class="num">01</span> WORK</a></li>
+          <li><a href="about.html"><span class="num">02</span> ABOUT</a></li>
+          <li><a href="contact.html"><span class="num">03</span> CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p><a href="mailto:nina.mondockova@gmail.com">nina.mondockova@gmail.com</a></p>
+        <p>(+421) 904 482 803</p>
+        <p>Aarhus, DK</p>
+        <div class="socials">
+          <span>EN</span>
+          <span>DK</span>
+          <span>SK</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Hlavný obsah pre UI/UX kategóriu -->
+    <main class="main-content">
+      
+      <!-- Tlačidlo späť a hlavička sekcie -->
+      <a href="index.html" class="btn-link">&larr; BACK TO ALL WORK</a>
+
+      <header class="category-header" style="margin-top: 30px;">
+        <p class="tagline">SELECTED PROJECTS</p>
+        <h1 class="category-title">UI/UX & DIGITAL DESIGN</h1>
+        <p class="description" style="max-width: 550px;">
+          A showcase of user interface design, mobile applications, interactive web experiences, and digital product wireframes.
+        </p>
+      </header>
+
+      <!-- Mriežka so všetkými UI/UX projektmi -->
+      <section class="projects-list-grid">
+        
+        <!-- Projekt 1: POKED / Mrazima -->
+        <a href="image/mrazima.pdf" target="_blank" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/mrazima.pdf" alt="Poked Mobile App Design" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">MOBILE APP / UI</span>
+              <h4 class="card-title">POKED</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+        <!-- Projekt 2: SMIECHKO -->
+        <a href="image/final.pdf" target="_blank" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/final.pdf" alt="Mobile game" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">MOBILE GAME</span>
+              <h4 class="card-title">MYSTICAL CREATURES</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+        <!-- Projekt 3: GAUDIFEST -->
+        <a href="#" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/katalog.jpg" alt="Dashboard Redesign" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">FESTIVAL APP</span>
+              <h4 class="card-title">GAUDIFEST</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+      </section>
+
+    </main>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

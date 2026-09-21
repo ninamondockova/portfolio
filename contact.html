@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Nina Mondockova</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    .contact-header {
+      margin-bottom: 40px;
+    }
+
+    .contact-title {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      margin-top: 40px;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    .contact-details {
+      margin-top: 30px;
+    }
+
+    .contact-details div {
+      margin-bottom: 15px;
+    }
+
+    .contact-details label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #777;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .contact-details a, .contact-details span {
+      font-size: 16px;
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 14px;
+      background: #fafafa;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      padding: 14px 28px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+
+    @media (max-width: 1024px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Ľavý panel / Navigácia -->
+    <aside class="sidebar">
+      <div class="brand">
+        <h1 class="logo-title">NINA MONDOCKOVA</h1>
+        <p class="logo-sub">GRAPHIC DESIGNER</p>
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html"><span class="num">01</span> WORK</a></li>
+          <li><a href="about.html"><span class="num">02</span> ABOUT</a></li>
+          <li class="active"><a href="contact.html"><span class="num">03</span> CONTACT <span class="dot">•</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p><a href="mailto:nina.mondockova@gmail.com">nina.mondockova@gmail.com</a></p>
+        <p>(+421) 904 482 803</p>
+        <p>Aarhus, DK</p>
+        <div class="socials">
+          <span>EN</span>
+          <span>DK</span>
+          <span>SK</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Hlavný obsah -->
+    <main class="main-content">
+      <a href="index.html" class="btn-link">&larr; BACK TO ALL WORK</a>
+
+      <header class="contact-header" style="margin-top: 30px;">
+        <p class="tagline">GET IN TOUCH</p>
+        <h1 class="contact-title">LET'S WORK TOGETHER.</h1>
+      </header>
+
+      <section class="contact-grid">
+        <div class="contact-info">
+          <p>
+            Have a project in mind, a question, or just want to say hello? Feel free to reach out using the form or directly via email.
+          </p>
+
+          <div class="contact-details">
+            <div>
+              <label>EMAIL</label>
+              <a href="mailto:nina.mondockova@gmail.com">nina.mondockova@gmail.com</a>
+            </div>
+            <div>
+              <label>PHONE</label>
+              <a href="tel:+421904482803">(+421) 904 482 803</a>
+            </div>
+            <div>
+              <label>LOCATION</label>
+              <span>Aarhus, Denmark</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">SEND MESSAGE</button>
+        </form>
+      </section>
+
+    </main>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>

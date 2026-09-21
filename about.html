@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Nina Mondočková</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    .about-header {
+      margin-bottom: 40px;
+    }
+
+    .about-title {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .about-grid {
+      margin-top: 40px;
+      max-width: 800px;
+    }
+
+    .about-bio {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .about-bio p {
+      margin-bottom: 20px;
+    }
+
+    .skills-experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .section-subtitle {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .skills-list, .experience-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skills-list li, .experience-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .skill-dots {
+      letter-spacing: 3px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    .experience-role {
+      font-weight: 600;
+    }
+
+    .experience-sub {
+      display: block;
+      font-size: 12px;
+      color: #666;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+
+    .experience-year {
+      color: #777;
+    }
+
+    .socials span {
+      cursor: pointer;
+      margin-right: 8px;
+      color: #888;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    
+    .socials span:hover, .socials span.active-lang {
+      color: #000;
+      font-weight: 800;
+    }
+
+    @media (max-width: 1024px) {
+      .skills-experience-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Ľavý panel / Navigácia -->
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+          <h1 class="logo-title">NINA MONDOČKOVÁ</h1>
+          <p class="logo-sub">GRAPHIC DESIGNER</p>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="index.html">
+              <span class="num">01</span> 
+              <span data-sk="PRÁCE" data-en="WORK" data-dk="ARBEJDE">WORK</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="about.html">
+              <span class="num">02</span> 
+              <span data-sk="O MNE" data-en="ABOUT" data-dk="OM">ABOUT</span> 
+              <span class="dot">•</span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html">
+              <span class="num">03</span> 
+              <span data-sk="KONTAKT" data-en="CONTACT" data-dk="KONTAKT">CONTACT</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p><a href="mailto:nina.mondockova@gmail.com">nina.mondockova@gmail.com</a></p>
+        <p>(+421) 904 482 803</p>
+        <p>Aarhus, DK</p>
+        <div class="socials">
+          <span id="btn-en" onclick="setLanguage('en')" class="active-lang">EN</span>
+          <span id="btn-dk" onclick="setLanguage('dk')">DK</span>
+          <span id="btn-sk" onclick="setLanguage('sk')">SK</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Hlavný obsah -->
+    <main class="main-content">
+      <a href="index.html" class="btn-link" data-sk="&larr; SPÄŤ NA VŠETKY PRÁCE" data-en="&larr; BACK TO ALL WORK" data-dk="&larr; TILBAGE TIL ALT ARBEJDE">&larr; BACK TO ALL WORK</a>
+
+      <header class="about-header" style="margin-top: 30px;">
+        <p class="tagline" data-sk="O MNE / CV" data-en="PASSIONATE CREATIVE / CV" data-dk="OM MIG / CV">PASSIONATE CREATIVE / CV</p>
+        <h1 class="about-title" data-sk="AHOJ, SOM NINA." data-en="HELLO, I'M NINA." data-dk="HEJ, JEG ER NINA.">HELLO, I'M NINA.</h1>
+      </header>
+
+      <section class="about-grid">
+        <div class="about-bio">
+          <p data-sk="Som študentka Multimedia Design na Business Academy Aarhus s pevným základom v grafickom dizajne. Mám skúsenosti s tvorbou vizuálnych identít, tlačových a digitálnych materiálov a reklamného obsahu."
+             data-en="I'm a Multimedia Design student at Business Academy Aarhus with a background in Graphic Design. I have experience creating visual identities, print and digital materials, and promotional content."
+             data-dk="Jeg er multimediedesignstuderende på Business Academy Aarhus med baggrund i grafisk design. Jeg har erfaring med at skabe visuelle identiteter, trykte og digitale materialer samt reklamemateriale.">
+            I'm a Multimedia Design student at Business Academy Aarhus with a background in Graphic Design. I have experience creating visual identities, print and digital materials, and promotional content.
+          </p>
+          <p data-sk="Počas štúdia a praktických skúseností pracujem s nástrojmi Adobe Illustrator, Photoshop a InDesign, pričom zároveň rozvíjam svoje zručnosti v oblasti UI/UX dizajnu, webdizajnu a digitálnych médií."
+             data-en="During my studies and internship experience, I work with Adobe Illustrator, Photoshop, and InDesign, while also developing my skills in UI/UX design, web design, and digital media."
+             data-dk="Gennem mine studier og erhvervserfaring arbejder jeg med Adobe Illustrator, Photoshop og InDesign, samtidig med at jeg udvikler mine færdigheder inden for UI/UX-design, webdesign og digitale medier.">
+            During my studies and internship experience, I work with Adobe Illustrator, Photoshop, and InDesign, while also developing my skills in UI/UX design, web design, and digital media.
+          </p>
+        </div>
+      </section>
+
+      <!-- Zručnosti, Programy a Vzdelanie / Skúsenosti -->
+      <section class="skills-experience-grid">
+        
+        <!-- Software & Programy podľa CV -->
+        <div>
+          <h3 class="section-subtitle" data-sk="SOFTWARE & PROGRAMY" data-en="SOFTWARE & TOOLS" data-dk="SOFTWARE & VÆRKTØJER">SOFTWARE & TOOLS</h3>
+          <ul class="skills-list">
+            <li><span>Adobe Illustrator</span> <span class="skill-dots">●●●●●</span></li>
+            <li><span>Adobe Photoshop</span> <span class="skill-dots">●●●●●</span></li>
+            <li><span>Adobe InDesign</span> <span class="skill-dots">●●●●●</span></li>
+            <li><span>HTML & CSS</span> <span class="skill-dots">●●●●●</span></li>
+            <li><span>Adobe After Effects</span> <span class="skill-dots">●●●○○</span></li>
+            <li><span>Figma</span> <span class="skill-dots">●●●○○</span></li>
+            <li><span>JavaScript</span> <span class="skill-dots">●●○○○</span></li>
+            <li><span>WordPress</span> <span class="skill-dots">●●○○○</span></li>
+            <li><span>Blender</span> <span class="skill-dots">●○○○○</span></li>
+          </ul>
+        </div>
+
+        <!-- Vzdelanie a Skúsenosti podľa CV -->
+        <div>
+          <h3 class="section-subtitle" data-sk="VZDELANIE A PRAX" data-en="EDUCATION & EXPERIENCE" data-dk="UDDANNELSE & ERFARING">EDUCATION & EXPERIENCE</h3>
+          <ul class="experience-list">
+            <li>
+              <div>
+                <span class="experience-role">Business Academy Aarhus</span>
+                <span class="experience-sub" data-sk="Multimedia Design — Aarhus, Dánsko" data-en="Multimedia Design — Aarhus, Denmark" data-dk="Multimediedesign — Aarhus, Danmark">Multimedia Design — Aarhus, Denmark</span>
+              </div>
+              <span class="experience-year">2026 — Present</span>
+            </li>
+            <li>
+              <div>
+                <span class="experience-role">SLARA — Advertising Agency</span>
+                <span class="experience-sub" data-sk="Grafické materiály pre Super Zoo & reklama" data-en="Graphic materials for Super Zoo & Ads" data-dk="Grafisk materiale til Super Zoo & reklamer">Graphic materials for Super Zoo & Ads</span>
+              </div>
+              <span class="experience-year">June 2025</span>
+            </li>
+            <li>
+              <div>
+                <span class="experience-role">Erasmus+ Internship / Study Project</span>
+                <span class="experience-sub" data-sk="Študijný projekt / Stáž — Riga, Lotyšsko" data-en="Study Project / Internship — Riga, Latvia" data-dk="Studieprojekt / Praktik — Riga, Letland">Study Project / Internship — Riga, Latvia</span>
+              </div>
+              <span class="experience-year">Nov 2024</span>
+            </li>
+            <li>
+              <div>
+                <span class="experience-role" data-sk="SŠ umelecko-animovanej tvorby" data-en="Private Sec. School of Art & Animation" data-dk="Privat Gymnasium for Kunst & Animation">Private Sec. School of Art & Animation</span>
+                <span class="experience-sub" data-sk="Grafický dizajn — Bratislava" data-en="Graphic Design — Bratislava" data-dk="Grafisk Design — Bratislava">Graphic Design — Bratislava</span>
+              </div>
+              <span class="experience-year">2022 — 2026</span>
+            </li>
+            <li>
+              <div>
+                <span class="experience-role">Catering & Event Support</span>
+                <span class="experience-sub" data-sk="Príprava podujatí a tímová práca" data-en="Event preparation & service" data-dk="Eventplanlægning & service">Event preparation & service</span>
+              </div>
+              <span class="experience-year">2023 — 2025</span>
+            </li>
+          </ul>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Skript pre prepínanie jazykov -->
+  <script>
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[data-' + lang + ']');
+      elements.forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+
+      document.querySelectorAll('.socials span').forEach(btn => btn.classList.remove('active-lang'));
+      const activeBtn = document.getElementById('btn-' + lang);
+      if (activeBtn) activeBtn.classList.add('active-lang');
+    }
+  </script>
+
+</body>
+</html>

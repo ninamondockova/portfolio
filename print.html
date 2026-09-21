@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Print Projects - Nina Mondockova</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    .category-header { margin-bottom: 50px; }
+    .category-title { font-size: 38px; font-weight: 800; letter-spacing: -1.5px; margin-top: 15px; margin-bottom: 15px; }
+    .projects-list-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px 25px; }
+    .project-card-full { text-decoration: none; color: inherit; display: block; }
+    .project-card-full .img-wrapper { width: 100%; height: 320px; overflow: hidden; background-color: #e5e5e5; border-radius: 12px; margin-bottom: 15px; }
+    .project-card-full img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .project-card-full:hover img { transform: scale(1.04); }
+    .socials span { cursor: pointer; margin-right: 8px; color: #888; font-weight: 500; transition: color 0.2s ease; }
+    .socials span:hover, .socials span.active-lang { color: #000; font-weight: 800; }
+    @media (max-width: 1024px) { .projects-list-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .projects-list-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+          <h1 class="logo-title">NINA MONDOCKOVA</h1>
+          <p class="logo-sub">GRAPHIC DESIGNER</p>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="index.html">
+              <span class="num">01</span> 
+              <span data-sk="PRÁCE" data-en="WORK" data-dk="ARBEJDE">WORK</span>
+            </a>
+          </li>
+          <li>
+            <a href="about.html">
+              <span class="num">02</span> 
+              <span data-sk="O MNE" data-en="ABOUT" data-dk="OM">ABOUT</span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html">
+              <span class="num">03</span> 
+              <span data-sk="KONTAKT" data-en="CONTACT" data-dk="KONTAKT">CONTACT</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p><a href="mailto:nina.mondockova@gmail.com">nina.mondockova@gmail.com</a></p>
+        <p>(+421) 904 482 803</p>
+        <p>Aarhus, DK</p>
+        <div class="socials">
+          <span id="btn-en" onclick="setLanguage('en')" class="active-lang">EN</span>
+          <span id="btn-dk" onclick="setLanguage('dk')">DK</span>
+          <span id="btn-sk" onclick="setLanguage('sk')">SK</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <a href="index.html" class="btn-link" data-sk="&larr; SPÄŤ NA VŠETKY PRÁCE" data-en="&larr; BACK TO ALL WORK" data-dk="&larr; TILBAGE TIL ALT ARBEJDE">&larr; BACK TO ALL WORK</a>
+
+      <header class="category-header" style="margin-top: 30px;">
+        <p class="tagline" data-sk="VYBRANÉ PROJEKTY" data-en="SELECTED PROJECTS" data-dk="UDVALGTE PROJEKTER">SELECTED PROJECTS</p>
+        <h1 class="category-title" data-sk="TLAČ A EDITORIÁLOVÝ DIZAJN" data-en="PRINT & EDITORIAL DESIGN" data-dk="TRYK & EDITORIELT DESIGN">PRINT & EDITORIAL DESIGN</h1>
+        <p class="description" style="max-width: 550px;" data-sk="Kolekcia tlačených médií, redakčných rozvrhnutí, katalógov, časopisov a fyzických aplikácií značiek." data-en="A collection of printed media, editorial layouts, catalog designs, magazine spreads, and physical brand applications." data-dk="En samling af trykte medier, redaktionelle layouts, katalogdesign, magasinsideopsætninger og fysiske brandapplikationer.">
+          A collection of printed media, editorial layouts, catalog designs, magazine spreads, and physical brand applications.
+        </p>
+      </header>
+
+      <section class="projects-list-grid">
+        
+        <!-- Projekt 1 -->
+        <a href="nutrivictus.html" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/katalog.jpg" alt="Nutrivictus Catalog" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">CATALOG / EDITORIAL</span>
+              <h4 class="card-title">NUTRIVICTUS</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+        <!-- Projekt 2 -->
+        <a href="tokyoade.html" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/tokyoade_plagat_v1.jpg" alt="Tokyoade Festival" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">MUSIC FESTIVAL</span>
+              <h4 class="card-title">TOKYOADE</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+        <!-- Projekt 3 -->
+        <a href="greek.html" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/Aftedita.jpg" alt="Greek Magazine" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">MAGAZINE</span>
+              <h4 class="card-title">GREEK</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+        <!-- Projekt 4 -->
+        <a href="alphabet.html" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/alphabet.jpg" alt="Own Alphabet" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">TYPOGRAPHY</span>
+              <h4 class="card-title">OWN ALPHABET</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+        <!-- Projekt 5 -->
+        <a href="posters.html" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/mondockova_eco.jpg" alt="Posters Collection" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">OTHER</span>
+              <h4 class="card-title">POSTERS</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[data-' + lang + ']');
+      elements.forEach(el => { el.textContent = el.getAttribute('data-' + lang); });
+      document.querySelectorAll('.socials span').forEach(btn => btn.classList.remove('active-lang'));
+      const activeBtn = document.getElementById('btn-' + lang);
+      if (activeBtn) activeBtn.classList.add('active-lang');
+    }
+  </script>
+</body>
+</html>

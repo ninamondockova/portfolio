@@ -1,0 +1,259 @@
+/* Základné nastavenia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f6f5f2;
+  color: #111111;
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Hlavné rozloženie (Layout) */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Ľavý Sidebar */
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f6f5f2;
+}
+
+.logo-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo-sub {
+  font-size: 10px;
+  color: #777;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav li {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #888;
+  margin-bottom: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.nav li:hover, .nav li.active {
+  color: #111;
+}
+
+.nav .num {
+  font-weight: 400;
+  margin-right: 15px;
+  color: #888;
+}
+
+.nav .dot {
+  margin-left: auto;
+  font-size: 14px;
+}
+
+.sidebar-footer {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.sidebar-footer p {
+  margin-bottom: 2px;
+}
+
+.socials {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* Hlavný obsah */
+.main-content {
+  flex: 1;
+  padding: 40px 50px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Hero sekcia */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.tagline {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 25px;
+  max-width: 280px;
+}
+
+.description {
+  font-size: 12px;
+  color: #555;
+  max-width: 260px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn-link {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid #111;
+  padding-bottom: 3px;
+}
+
+/* Náhľad AURORA */
+.featured-image img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-info {
+  padding-top: 10px;
+}
+
+.category {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.featured-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.project-desc {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.project-link {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Grid spodných kariet */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.project-card .img-wrapper {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  margin-bottom: 12px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.03);
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card-cat {
+  display: block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.card-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.arrow {
+  font-size: 12px;
+  color: #555;
+}
+
+/* Responsivita pre menšie obrazovky */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 30px;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

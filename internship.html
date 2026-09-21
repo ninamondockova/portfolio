@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internship Work - Nina Mondockova</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    .category-header {
+      margin-bottom: 40px;
+    }
+
+    .category-title {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    /* Meta informácie o projekte */
+    .project-meta-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    .meta-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      border-top: 1px solid #e5e5e5;
+      padding-top: 20px;
+    }
+
+    .meta-item label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #888;
+      margin-bottom: 5px;
+    }
+
+    .meta-item span {
+      font-size: 15px;
+      font-weight: 600;
+      color: #111;
+    }
+
+    /* Sekcie */
+    .work-section {
+      border-top: 1px solid #e5e5e5;
+      padding-top: 40px;
+      margin-bottom: 60px;
+    }
+
+    .section-title-wrap {
+      margin-bottom: 25px;
+    }
+
+    .section-title-wrap h3 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .section-title-wrap p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* Galérie */
+    .gallery-grid,
+    .gallery-grid-compact {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+      align-items: center;
+    }
+
+    .gallery-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #f5f5f5;
+      border: 1px solid #e5e5e5;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .gallery-item img {
+      max-width: 100%;
+      max-height: 160px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* PDF header */
+    .pdf-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    /* PDF viewer */
+    .pdf-container {
+      width: 100%;
+      height: 750px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e5e5;
+      background-color: #fafafa;
+    }
+
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* Video */
+    .video-container {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #000;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Languages */
+    .socials span {
+      cursor: pointer;
+      margin-right: 8px;
+      color: #888;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .socials span:hover,
+    .socials span.active-lang {
+      color: #000;
+      font-weight: 800;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .project-meta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pdf-container {
+        height: 500px;
+      }
+
+      .pdf-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="brand">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+          <h1 class="logo-title">NINA MONDOCKOVA</h1>
+          <p class="logo-sub">GRAPHIC DESIGNER</p>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li class="active">
+            <a href="index.html">
+              <span class="num">01</span> WORK
+            </a>
+          </li>
+
+          <li>
+            <a href="about.html">
+              <span class="num">02</span> ABOUT
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html">
+              <span class="num">03</span> CONTACT
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>
+          <a href="mailto:nina.mondockova@gmail.com">
+            nina.mondockova@gmail.com
+          </a>
+        </p>
+
+        <p>(+421) 904 482 803</p>
+        <p>Aarhus, DK</p>
+
+        <div class="socials">
+          <span id="btn-en" onclick="setLanguage('en')" class="active-lang">
+            EN
+          </span>
+
+          <span id="btn-dk" onclick="setLanguage('dk')">
+            DK
+          </span>
+
+          <span id="btn-sk" onclick="setLanguage('sk')">
+            SK
+          </span>
+        </div>
+      </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <a
+        href="index.html"
+        class="btn-link"
+        data-sk="&larr; SPÄŤ NA VŠETKY PRÁCE"
+        data-en="&larr; BACK TO ALL WORK"
+        data-dk="&larr; TILBAGE TIL ALT ARBEJDE">
+        &larr; BACK TO ALL WORK
+      </a>
+
+
+      <!-- HEADER -->
+      <header class="category-header" style="margin-top: 30px;">
+
+        <p
+          class="tagline"
+          data-sk="STÁŽ & SKÚSENOSTI"
+          data-en="INTERNSHIP WORK"
+          data-dk="PRAKTIK ARBEJDE">
+          INTERNSHIP WORK
+        </p>
+
+        <h1 class="category-title">
+          SUPER ZOO
+        </h1>
+
+      </header>
+
+
+      <!-- PROJECT META -->
+      <section class="project-meta-grid">
+
+        <div>
+
+          <p
+            class="description"
+            data-sk="Kolekcia dizajnových podkladov, kampaňových vizuálov a podkladov pre marketing vytvorených počas stáže v Super Zoo."
+            data-en="Projects, marketing campaigns, and design assets developed during professional internship practice at Super Zoo."
+            data-dk="Projekter, kampagner og designaktiver udviklet under erhvervspraktik hos Super Zoo.">
+
+            Projects, marketing campaigns, and design assets developed during professional internship practice at Super Zoo.
+
+          </p>
+
+        </div>
+
+
+        <div class="meta-details">
+
+          <div class="meta-item">
+            <label
+              data-sk="ROK"
+              data-en="YEAR"
+              data-dk="ÅR">
+              YEAR
+            </label>
+
+            <span>2023 / 2024</span>
+          </div>
+
+
+          <div class="meta-item">
+
+            <label
+              data-sk="ROZSAH"
+              data-en="SCOPE"
+              data-dk="OMFANG">
+              SCOPE
+            </label>
+
+            <span>
+              Digital, Social Media, Print
+            </span>
+
+          </div>
+
+
+          <div class="meta-item">
+
+            <label
+              data-sk="MANDÁT"
+              data-en="ROLE"
+              data-dk="ROLLE">
+              ROLE
+            </label>
+
+            <span>
+              Graphic Designer Intern
+            </span>
+
+          </div>
+
+
+          <div class="meta-item">
+
+            <label
+              data-sk="DOKUMENT"
+              data-en="DOCUMENT"
+              data-dk="DOKUMENT">
+              DOCUMENT
+            </label>
+
+            <span>
+              6 Pages PDF & DL Flyer
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- 1. ONLINE BANNERS -->
+      <section class="work-section">
+
+        <div class="section-title-wrap">
+
+          <h3
+            data-sk="ONLINE BANNERY"
+            data-en="ONLINE BANNERS"
+            data-dk="ONLINE BANNERE">
+            ONLINE BANNERS
+          </h3>
+
+          <p
+            data-sk="Webové bannery pre e-shop a reklamné plochy."
+            data-en="Web banners designed for e-shop and display advertising."
+            data-dk="Webbannere designet til webshop og displayannoncering.">
+
+            Web banners designed for e-shop and display advertising.
+
+          </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item">
+            <img src="image/banner1.png" alt="Online Banner 1">
+          </div>
+
+          <div class="gallery-item">
+            <img src="image/banner2.png" alt="Online Banner 2">
+          </div>
+
+          <div class="gallery-item">
+            <img src="image/banner3.png" alt="Online Banner 3">
+          </div>
+
+          <div class="gallery-item">
+            <img src="image/banner4.png" alt="Online Banner 4">
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- 2. PPC -->
+      <section class="work-section">
+
+        <div class="section-title-wrap">
+
+          <h3
+            data-sk="PPC KAMPANE"
+            data-en="PPC CAMPAIGN ADS"
+            data-dk="PPC KAMPAGNER">
+            PPC CAMPAIGN ADS
+          </h3>
+
+          <p
+            data-sk="Vizuály pre výkonnostné reklamné kampane."
+            data-en="Visuals created for digital performance campaigns."
+            data-dk="Visuelle elementer skabt til digitale præstationskampagner.">
+
+            Visuals created for digital performance campaigns.
+
+          </p>
+
+        </div>
+
+
+        <div class="gallery-grid-compact">
+
+          <div class="gallery-item"><img src="image/ppc1.jpg" alt="PPC Ad 1"></div>
+          <div class="gallery-item"><img src="image/ppc2.jpg" alt="PPC Ad 2"></div>
+          <div class="gallery-item"><img src="image/ppc3.jpg" alt="PPC Ad 3"></div>
+          <div class="gallery-item"><img src="image/ppc4.jpg" alt="PPC Ad 4"></div>
+          <div class="gallery-item"><img src="image/ppc5.jpg" alt="PPC Ad 5"></div>
+          <div class="gallery-item"><img src="image/ppc6.jpg" alt="PPC Ad 6"></div>
+          <div class="gallery-item"><img src="image/ppc7.jpg" alt="PPC Ad 7"></div>
+          <div class="gallery-item"><img src="image/ppc8.jpg" alt="PPC Ad 8"></div>
+          <div class="gallery-item"><img src="image/ppc9.jpg" alt="PPC Ad 9"></div>
+          <div class="gallery-item"><img src="image/ppc10.jpg" alt="PPC Ad 10"></div>
+          <div class="gallery-item"><img src="image/ppc11.jpg" alt="PPC Ad 11"></div>
+          <div class="gallery-item"><img src="image/ppc12.jpg" alt="PPC Ad 12"></div>
+
+        </div>
+
+      </section>
+
+
+      <!-- 3. SOCIAL MEDIA -->
+      <section class="work-section">
+
+        <div class="section-title-wrap">
+
+          <h3
+            data-sk="SOCIÁLNE SIETE (SOME)"
+            data-en="SOCIAL MEDIA (SOME)"
+            data-dk="SOCIALE MEDIER (SOME)">
+            SOCIAL MEDIA (SOME)
+          </h3>
+
+          <p
+            data-sk="Príspevky, príbehy a vizuálny obsah pre Instagram a Facebook."
+            data-en="Posts, stories, and visual content crafted for Instagram and Facebook."
+            data-dk="Opslag, stories og visuelt indhold skabt til Instagram og Facebook.">
+
+            Posts, stories, and visual content crafted for Instagram and Facebook.
+
+          </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item">
+            <img src="image/some1.png" alt="Social Media 1">
+          </div>
+
+          <div class="gallery-item">
+            <img src="image/some2.png" alt="Social Media 2">
+          </div>
+
+          <div class="gallery-item">
+            <img src="image/some3.png" alt="Social Media 3">
+          </div>
+
+          <div class="gallery-item">
+            <img src="image/some4.png" alt="Social Media 4">
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- 4. APP BANNERS -->
+      <section class="work-section">
+
+        <div class="section-title-wrap">
+
+          <h3
+            data-sk="APLIKAČNÉ BANNERY"
+            data-en="APP BANNERS"
+            data-dk="APP BANNERE">
+            APP BANNERS
+          </h3>
+
+          <p
+            data-sk="In-app bannery a promo grafika do mobilnej aplikácie Super Zoo."
+            data-en="In-app promotional graphics and banners for Super Zoo mobile app."
+            data-dk="In-app kampagnegrafik og bannere til Super Zoo mobilapp.">
+
+            In-app promotional graphics and banners for Super Zoo mobile app.
+
+          </p>
+
+        </div>
+
+
+        <div class="gallery-grid-compact">
+
+          <div class="gallery-item"><img src="image/1-1.png" alt="App Banner 1"></div>
+          <div class="gallery-item"><img src="image/1-2.png" alt="App Banner 2"></div>
+          <div class="gallery-item"><img src="image/1-3.png" alt="App Banner 3"></div>
+          <div class="gallery-item"><img src="image/1-4.png" alt="App Banner 4"></div>
+          <div class="gallery-item"><img src="image/1-5.png" alt="App Banner 5"></div>
+          <div class="gallery-item"><img src="image/1-6.png" alt="App Banner 6"></div>
+          <div class="gallery-item"><img src="image/1-7.png" alt="App Banner 7"></div>
+          <div class="gallery-item"><img src="image/1-8.png" alt="App Banner 8"></div>
+
+          <div class="gallery-item"><img src="image/2-1.png" alt="App Banner 9"></div>
+          <div class="gallery-item"><img src="image/2-2.png" alt="App Banner 10"></div>
+          <div class="gallery-item"><img src="image/2-3.png" alt="App Banner 11"></div>
+          <div class="gallery-item"><img src="image/2-4.png" alt="App Banner 12"></div>
+
+        </div>
+
+      </section>
+
+
+      <!-- 5. DL FLYER -->
+      <section class="work-section">
+
+        <div class="pdf-header">
+
+          <div>
+
+            <h3
+              style="font-size: 24px; font-weight: 800;"
+              data-sk="DL LETÁK (DVOJSTRANA)"
+              data-en="DL FLYER (2-SIDED)"
+              data-dk="DL BROCHURE (2 SIDER)">
+
+              DL FLYER (2-SIDED)
+
+            </h3>
+
+
+            <p
+              style="color: #666; font-size: 14px; margin-top: 5px;"
+              data-sk="Návrh prednej a zadnej strany reklamného DL letáka."
+              data-en="Front and back design of promotional DL flyer."
+              data-dk="Forside og bagside design af DL brochure.">
+
+              Front and back design of promotional DL flyer.
+
+            </p>
+
+          </div>
+
+
+          <a
+            href="image/letak_superzoo.pdf"
+            target="_blank"
+            class="btn-link"
+            style="white-space: nowrap;"
+            data-sk="OTVORIŤ DL LETÁK PDF →"
+            data-en="OPEN DL FLYER PDF →"
+            data-dk="ÅBN DL FLYER PDF →">
+
+            OPEN DL FLYER PDF →
+
+          </a>
+
+        </div>
+
+
+        <!-- PDF S OBOJSTRANNÝMI STRANAMI -->
+        <div class="pdf-container">
+
+          <iframe
+            src="image/letak_superzoo.pdf#toolbar=1"
+            title="Super Zoo DL Flyer">
+          </iframe>
+
+        </div>
+
+      </section>
+
+
+      <!-- 6. ANIMATION / VIDEO -->
+      <section class="work-section">
+
+        <div class="section-title-wrap">
+
+          <h3
+            data-sk="ANIMÁCIA / VIDEO"
+            data-en="ANIMATION / VIDEO"
+            data-dk="ANIMATION / VIDEO">
+            ANIMATION / VIDEO
+          </h3>
+
+        </div>
+
+
+        <div class="video-container">
+
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            controls
+            poster="image/superzoo_animation-poster.jpg">
+
+            <source
+              src="image/superzoo-showcase.mp4"
+              type="video/mp4">
+
+            Váš prehliadač nepodporuje prehrávanie videí.
+
+          </video>
+
+        </div>
+
+      </section>
+
+
+      <!-- 7. 6-STRANOVÉ PDF -->
+      <section class="work-section">
+
+        <div class="pdf-header">
+
+          <div>
+
+            <h2
+              style="font-size: 24px; font-weight: 800;"
+              data-sk="PREZENTÁCIA (6 STRÁN)"
+              data-en="DOCUMENTATION (6 PAGES)"
+              data-dk="DOKUMENTATION (6 SIDER)">
+
+              DOCUMENTATION (6 PAGES)
+
+            </h2>
+
+
+            <p
+              style="color: #666; font-size: 14px; margin-top: 5px;"
+              data-sk="Prelistujte si dokument priamo tu alebo si ho stiahnite."
+              data-en="Browse through the 6-page document below or download the PDF file."
+              data-dk="Gennemse det 6-siders dokument nedenfor eller download PDF-filen.">
+
+              Browse through the 6-page document below or download the PDF file.
+
+            </p>
+
+          </div>
+
+
+          <a
+            href="image/PRINTOVINY_1.pdf"
+            target="_blank"
+            class="btn-link"
+            style="white-space: nowrap;"
+            data-sk="OTVORIŤ PDF →"
+            data-en="OPEN PDF →"
+            data-dk="ÅBN PDF →">
+
+            OPEN PDF →
+
+          </a>
+
+        </div>
+
+
+        <div class="pdf-container">
+
+          <iframe
+            src="image/PRINTOVINY_1.pdf#toolbar=1"
+            title="Super Zoo PDF Manual">
+          </iframe>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- LANGUAGE SCRIPT -->
+  <script>
+
+    function setLanguage(lang) {
+
+      const elements =
+        document.querySelectorAll('[data-' + lang + ']');
+
+      elements.forEach(el => {
+
+        el.innerHTML =
+          el.getAttribute('data-' + lang);
+
+      });
+
+
+      document
+        .querySelectorAll('.socials span')
+        .forEach(btn =>
+          btn.classList.remove('active-lang')
+        );
+
+
+      const activeBtn =
+        document.getElementById('btn-' + lang);
+
+
+      if (activeBtn) {
+        activeBtn.classList.add('active-lang');
+      }
+
+    }
+
+  </script>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

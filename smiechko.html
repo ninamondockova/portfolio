@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smiechko Brand Identity - Nina Mondockova</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    .project-header { margin-bottom: 40px; }
+    .project-title { font-size: 42px; font-weight: 800; letter-spacing: -1.5px; margin-top: 15px; margin-bottom: 20px; }
+    
+    .project-meta-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 50px;
+      margin-bottom: 60px;
+    }
+
+    .meta-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      border-top: 1px solid #e5e5e5;
+      padding-top: 20px;
+    }
+
+    .meta-item label { display: block; font-size: 12px; font-weight: 700; color: #888; margin-bottom: 5px; }
+    .meta-item span { font-size: 15px; font-weight: 600; color: #111; }
+
+    /* PDF Viewer Sekcia */
+    .pdf-section {
+      border-top: 1px solid #e5e5e5;
+      padding-top: 50px;
+      margin-top: 60px;
+    }
+
+    .pdf-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .pdf-container {
+      width: 100%;
+      height: 800px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e5e5;
+      background-color: #fafafa;
+    }
+
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .socials span { cursor: pointer; margin-right: 8px; color: #888; font-weight: 500; transition: color 0.2s ease; }
+    .socials span:hover, .socials span.active-lang { color: #000; font-weight: 800; }
+
+    @media (max-width: 900px) {
+      .project-meta-grid { grid-template-columns: 1fr; }
+      .pdf-container { height: 500px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+          <h1 class="logo-title">NINA MONDOCKOVA</h1>
+          <p class="logo-sub">GRAPHIC DESIGNER</p>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li class="active">
+            <a href="index.html">
+              <span class="num">01</span> 
+              <span data-sk="PRÁCE" data-en="WORK" data-dk="ARBEJDE">WORK</span> 
+              <span class="dot">•</span>
+            </a>
+          </li>
+          <li>
+            <a href="about.html">
+              <span class="num">02</span> 
+              <span data-sk="O MNE" data-en="ABOUT" data-dk="OM">ABOUT</span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html">
+              <span class="num">03</span> 
+              <span data-sk="KONTAKT" data-en="CONTACT" data-dk="KONTAKT">CONTACT</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p><a href="mailto:nina.mondockova@gmail.com">nina.mondockova@gmail.com</a></p>
+        <p>(+421) 904 482 803</p>
+        <p>Aarhus, DK</p>
+        <div class="socials">
+          <span id="btn-en" onclick="setLanguage('en')" class="active-lang">EN</span>
+          <span id="btn-dk" onclick="setLanguage('dk')">DK</span>
+          <span id="btn-sk" onclick="setLanguage('sk')">SK</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <a href="branding.html" class="btn-link" data-sk="&larr; SPÄŤ NA BRANDING" data-en="&larr; BACK TO BRANDING" data-dk="&larr; TILBAGE TIL BRANDING">&larr; BACK TO BRANDING</a>
+
+      <header class="project-header" style="margin-top: 30px;">
+        <p class="tagline" data-sk="BRANDING & DIZAJN IDENTÍT" data-en="BRANDING & VISUAL IDENTITY" data-dk="BRANDING & VISUEL IDENTITET">BRANDING & VISUAL IDENTITY</p>
+        <h1 class="project-title">SMIECHKO</h1>
+      </header>
+
+      <section class="project-meta-grid">
+        <div>
+          <p class="description" 
+             data-sk="Kompletná vizuálna identita a dizajn manuál pre značku Smiechko. Projekt zahŕňa návrh logotypu, farebnej palety, typografie, aplikácie značky na tlačoviny a reklamné predmety, a detailné pravidlá používania v rozsahu 50 strán." 
+             data-en="Complete visual identity and brand manual for Smiechko. The project includes logo design, color palette, typography, brand applications on print collateral and promotional materials, and a comprehensive 50-page brand guidelines manual."
+             data-dk="Komplet visuel identitet og brand manual for Smiechko. Projektet omfatter logodesign, farvepalette, typografi, brandapplikationer på tryktsager samt en omfattende 50-siders brand manual.">
+            Complete visual identity and brand manual for Smiechko. The project includes logo design, color palette, typography, brand applications on print collateral and promotional materials, and a comprehensive 50-page brand guidelines manual.
+          </p>
+        </div>
+
+        <div class="meta-details">
+          <div class="meta-item">
+            <label data-sk="ROK" data-en="YEAR" data-dk="ÅR">YEAR</label>
+            <span>2025</span>
+          </div>
+          <div class="meta-item">
+            <label data-sk="ROZSAH" data-en="SCOPE" data-dk="OMFANG">SCOPE</label>
+            <span>Branding, Guidelines</span>
+          </div>
+          <div class="meta-item">
+            <label data-sk="MANDÁT" data-en="ROLE" data-dk="ROLLE">ROLE</label>
+            <span>Lead Designer</span>
+          </div>
+          <div class="meta-item">
+            <label data-sk="MANUÁL" data-en="MANUAL" data-dk="MANUAL">MANUAL</label>
+            <span>50 Pages</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Celý 50-stranový Dizajn Manuál v PDF -->
+      <section class="pdf-section">
+        <div class="pdf-header">
+          <div>
+            <h2 style="font-size: 24px; font-weight: 800;" data-sk="BRAND MANUAL (50 STRÁN)" data-en="FULL BRAND MANUAL (50 PAGES)" data-dk="FULL BRAND MANUAL (50 SIDER)">FULL BRAND MANUAL (50 PAGES)</h2>
+            <p style="color: #666; font-size: 14px; margin-top: 5px;" data-sk="Prelistujte si celý dizajn manuál priamo tu alebo si ho stiahnite." data-en="Browse through the complete brand manual below or download the PDF file." data-dk="Gennemse den komplette brand manual nedenfor eller download PDF-filen.">Browse through the complete brand manual below or download the PDF file.</p>
+          </div>
+          <a href="image/smiechko.pdf" target="_blank" class="btn-link" style="white-space: nowrap;" data-sk="OTVORIŤ PDF &rarr;" data-en="OPEN PDF &rarr;" data-dk="ÅBN PDF &rarr;">OPEN PDF &rarr;</a>
+        </div>
+
+        <div class="pdf-container">
+          <iframe src="image/RK_mondockova.pdf#toolbar=1" title="Smiechko Brand Guidelines Manual"></iframe>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[data-' + lang + ']');
+      elements.forEach(el => { el.textContent = el.getAttribute('data-' + lang); });
+      document.querySelectorAll('.socials span').forEach(btn => btn.classList.remove('active-lang'));
+      const activeBtn = document.getElementById('btn-' + lang);
+      if (activeBtn) activeBtn.classList.add('active-lang');
+    }
+  </script>
+</body>
+</html>

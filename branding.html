@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branding Projects - Nina Mondockova</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    .category-header { margin-bottom: 50px; }
+    .category-title { font-size: 38px; font-weight: 800; letter-spacing: -1.5px; margin-top: 15px; margin-bottom: 15px; }
+    .projects-list-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px 25px; }
+    .project-card-full { text-decoration: none; color: inherit; display: block; }
+    .project-card-full .img-wrapper { width: 100%; height: 320px; overflow: hidden; background-color: #e5e5e5; border-radius: 12px; margin-bottom: 15px; }
+    .project-card-full img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .project-card-full:hover img { transform: scale(1.04); }
+    .socials span { cursor: pointer; margin-right: 8px; color: #888; font-weight: 500; transition: color 0.2s ease; }
+    .socials span:hover, .socials span.active-lang { color: #000; font-weight: 800; }
+    @media (max-width: 1024px) { .projects-list-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .projects-list-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+          <h1 class="logo-title">NINA MONDOCKOVA</h1>
+          <p class="logo-sub">GRAPHIC DESIGNER</p>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li class="active">
+            <a href="index.html">
+              <span class="num">01</span> 
+              <span data-sk="PRÁCE" data-en="WORK" data-dk="ARBEJDE">WORK</span> 
+              <span class="dot">•</span>
+            </a>
+          </li>
+          <li>
+            <a href="about.html">
+              <span class="num">02</span> 
+              <span data-sk="O MNE" data-en="ABOUT" data-dk="OM">ABOUT</span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html">
+              <span class="num">03</span> 
+              <span data-sk="KONTAKT" data-en="CONTACT" data-dk="KONTAKT">CONTACT</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p><a href="mailto:nina.mondockova@gmail.com">nina.mondockova@gmail.com</a></p>
+        <p>(+421) 904 482 803</p>
+        <p>Aarhus, DK</p>
+        <div class="socials">
+          <span id="btn-en" onclick="setLanguage('en')" class="active-lang">EN</span>
+          <span id="btn-dk" onclick="setLanguage('dk')">DK</span>
+          <span id="btn-sk" onclick="setLanguage('sk')">SK</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <a href="index.html" class="btn-link" data-sk="&larr; SPÄŤ NA VŠETKY PRÁCE" data-en="&larr; BACK TO ALL WORK" data-dk="&larr; TILBAGE TIL ALT ARBEJDE">&larr; BACK TO ALL WORK</a>
+
+      <header class="category-header" style="margin-top: 30px;">
+        <p class="tagline" data-sk="VYBRANÉ PROJEKTY" data-en="SELECTED PROJECTS" data-dk="UDVALGTE PROJEKTER">SELECTED PROJECTS</p>
+        <h1 class="category-title" data-sk="BRANDING & DIZAJN IDENTÍT" data-en="BRANDING & IDENTITY DESIGN" data-dk="BRANDING & IDENTITETSDESIGN">BRANDING & IDENTITY DESIGN</h1>
+        <p class="description" style="max-width: 550px;" data-sk="Systémy vizuálnej identity, dizajn loga, stratégia značiek, obaly a dizajn manuály pre moderné firmy." data-en="Visual identity systems, logo designs, brand strategy, packaging, and brand guidelines for modern companies." data-dk="Visuelle identitetssystemer, logodesign, brandstrategi, emballage og brand guidelines til moderne virksomheder.">
+          Visual identity systems, logo designs, brand strategy, packaging, and brand guidelines for modern companies.
+        </p>
+      </header>
+
+      <section class="projects-list-grid">
+        
+        <a href="smiechko.html" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/smiechko.jpg" alt="Smiechko Brand Identity" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">BRAND IDENTITY</span>
+              <h4 class="card-title">SMIECHKO</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+        <a href="fruitiq.html" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/fruitiq.jpg" alt="Fruitiq Branding & Packaging" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">BRANDING & PACKAGING</span>
+              <h4 class="card-title">FRUITIQ</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+        <a href="catchles.html" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/catchles.jpg" alt="Catchles Brand Identity" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">VISUAL IDENTITY</span>
+              <h4 class="card-title">CATCHLES</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+        <a href="mrazima.html" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/mrazima.jpg" alt="MRAZIMA Brand System" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">BRANDING & PACKAGING</span>
+              <h4 class="card-title">MRAZIMA</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+        <!-- Upravené na salvik.html -->
+        <a href="salvik.html" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/salvik.jpg" alt="Salvik Brand Identity" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">VISUAL IDENTITY</span>
+              <h4 class="card-title">SALVIK</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+        <!-- Upravené na ballk.html -->
+        <a href="ballk.html" class="project-card-full">
+          <div class="img-wrapper">
+            <img src="image/ballk.jpg" alt="Ballk Information System" />
+          </div>
+          <div class="card-meta">
+            <div>
+              <span class="card-cat">INFORMATION SYSTEM</span>
+              <h4 class="card-title">BALLK</h4>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </a>
+
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[data-' + lang + ']');
+      elements.forEach(el => { el.textContent = el.getAttribute('data-' + lang); });
+      document.querySelectorAll('.socials span').forEach(btn => btn.classList.remove('active-lang'));
+      const activeBtn = document.getElementById('btn-' + lang);
+      if (activeBtn) activeBtn.classList.add('active-lang');
+    }
+  </script>
+</body>
+</html>
