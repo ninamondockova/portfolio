@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mystical Creatures - Nina Mondockova</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    .project-header { margin-bottom: 40px; }
+    .project-title { font-size: 42px; font-weight: 800; letter-spacing: -1.5px; margin-top: 15px; margin-bottom: 20px; }
+    
+    .project-meta-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 50px;
+      margin-bottom: 60px;
+    }
+
+    .meta-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      border-top: 1px solid #e5e5e5;
+      padding-top: 20px;
+    }
+
+    .meta-item label { display: block; font-size: 12px; font-weight: 700; color: #888; margin-bottom: 5px; }
+    .meta-item span { font-size: 15px; font-weight: 600; color: #111; }
+
+    .project-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .gallery-item {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #f5f5f5;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .socials span { cursor: pointer; margin-right: 8px; color: #888; font-weight: 500; transition: color 0.2s ease; }
+    .socials span:hover, .socials span.active-lang { color: #000; font-weight: 800; }
+
+    @media (max-width: 900px) {
+      .project-meta-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+          <h1 class="logo-title">NINA MONDOCKOVA</h1>
+          <p class="logo-sub">GRAPHIC DESIGNER</p>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="index.html">
+              <span class="num">01</span> 
+              <span data-sk="PRÁCE" data-en="WORK" data-dk="ARBEJDE">WORK</span>
+            </a>
+          </li>
+          <li>
+            <a href="about.html">
+              <span class="num">02</span> 
+              <span data-sk="O MNE" data-en="ABOUT" data-dk="OM">ABOUT</span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html">
+              <span class="num">03</span> 
+              <span data-sk="KONTAKT" data-en="CONTACT" data-dk="KONTAKT">CONTACT</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p><a href="mailto:nina.mondockova@gmail.com">nina.mondockova@gmail.com</a></p>
+        <p>(+421) 904 482 803</p>
+        <p>Aarhus, DK</p>
+        <div class="socials">
+          <span id="btn-en" onclick="setLanguage('en')" class="active-lang">EN</span>
+          <span id="btn-dk" onclick="setLanguage('dk')">DK</span>
+          <span id="btn-sk" onclick="setLanguage('sk')">SK</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <a href="uiux.html" class="btn-link" data-sk="&larr; SPÄŤ NA UI/UX" data-en="&larr; BACK TO UI/UX" data-dk="&larr; TILBAGE TIL UI/UX">&larr; BACK TO UI/UX</a>
+
+      <header class="project-header" style="margin-top: 30px;">
+        <p class="tagline" data-sk="MOBILNÁ HRA, UI/UX DESIGN" data-en="MOBILE GAME, UI/UX DESIGN" data-dk="MOBILSPIL, UI/UX DESIGN">MOBILE GAME, UI/UX DESIGN</p>
+        <h1 class="project-title">MYSTICAL CREATURES</h1>
+      </header>
+
+      <section class="project-meta-grid">
+        <div>
+          <p class="description" 
+             data-sk="Pohlcujúci zážitok z mobilnej hry zameraný na mytologický svet, intuitívne používateľské rozhranie a pútavé interakcie s postavami." 
+             data-en="An immersive mobile gaming experience centered around mythical worldbuilding, intuitive user interfaces, and engaging character interactions."
+             data-dk="En fordybende mobilspiloplevelse centreret omkring mytisk verdenbygning, intuitive brugerflader og engagerende karakterinteraktioner.">
+            An immersive mobile gaming experience centered around mythical worldbuilding, intuitive user interfaces, and engaging character interactions.
+          </p>
+        </div>
+
+        <div class="meta-details">
+          <div class="meta-item">
+            <label data-sk="ROK" data-en="YEAR" data-dk="ÅR">YEAR</label>
+            <span>2025</span>
+          </div>
+          <div class="meta-item">
+            <label data-sk="ROZSAH" data-en="SCOPE" data-dk="OMFANG">SCOPE</label>
+            <span>Mobile Game, UI/UX</span>
+          </div>
+          <div class="meta-item">
+            <label data-sk="MANDÁT" data-en="ROLE" data-dk="ROLLE">ROLE</label>
+            <span>UI/UX Designer</span>
+          </div>
+          <div class="meta-item">
+            <label data-sk="TYP" data-en="TYPE" data-dk="TYPE">TYPE</label>
+            <span>Case Study</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Náhľad projektu (Jeden Obrázok) -->
+      <section class="project-gallery">
+        <div class="gallery-item">
+          <img src="image/final.jpg" alt="Mystical Creatures Preview" />
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[data-' + lang + ']');
+      elements.forEach(el => { el.textContent = el.getAttribute('data-' + lang); });
+      document.querySelectorAll('.socials span').forEach(btn => btn.classList.remove('active-lang'));
+      const activeBtn = document.getElementById('btn-' + lang);
+      if (activeBtn) activeBtn.classList.add('active-lang');
+    }
+  </script>
+</body>
+</html>

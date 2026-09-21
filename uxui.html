@@ -42,6 +42,7 @@
       background-color: #e5e5e5;
       border-radius: 12px;
       margin-bottom: 15px;
+      position: relative;
     }
 
     .project-card-full img {
@@ -51,8 +52,31 @@
       transition: transform 0.4s ease;
     }
 
-    .project-card-full:hover img {
+    .project-card-full:not(.disabled):hover img {
       transform: scale(1.04);
+    }
+
+    /* Štýly pre nepripravené projekty bez obrázka */
+    .project-card-full.disabled {
+      cursor: default;
+      opacity: 0.7;
+    }
+
+    .project-card-full.disabled .img-wrapper {
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .coming-soon-badge {
+      background-color: rgba(0, 0, 0, 0.08);
+      color: #666;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
     @media (max-width: 1024px) {
@@ -115,24 +139,23 @@
       <!-- Mriežka so všetkými UI/UX projektmi -->
       <section class="projects-list-grid">
         
-        <!-- Projekt 1: POKED / Mrazima -->
-        <a href="image/mrazima.pdf" target="_blank" class="project-card-full">
+        <!-- Projekt 1: POKED (Pripravuje sa) -->
+        <div class="project-card-full disabled">
           <div class="img-wrapper">
-            <img src="image/mrazima.pdf" alt="Poked Mobile App Design" />
+            <span class="coming-soon-badge">COMING SOON</span>
           </div>
           <div class="card-meta">
             <div>
               <span class="card-cat">MOBILE APP / UI</span>
               <h4 class="card-title">POKED</h4>
             </div>
-            <span class="arrow">&rarr;</span>
           </div>
-        </a>
+        </div>
 
-        <!-- Projekt 2: SMIECHKO -->
-        <a href="image/final.pdf" target="_blank" class="project-card-full">
+        <!-- Projekt 2: MYSTICAL CREATURES (Aktívny) -->
+        <a href="mystical.html" class="project-card-full">
           <div class="img-wrapper">
-            <img src="image/final.pdf" alt="Mobile game" />
+            <img src="image/final.jpg" alt="Mobile game" />
           </div>
           <div class="card-meta">
             <div>
@@ -143,19 +166,18 @@
           </div>
         </a>
 
-        <!-- Projekt 3: GAUDIFEST -->
-        <a href="#" class="project-card-full">
+        <!-- Projekt 3: GAUDIFEST (Pripravuje sa) -->
+        <div class="project-card-full disabled">
           <div class="img-wrapper">
-            <img src="image/katalog.jpg" alt="Dashboard Redesign" />
+            <span class="coming-soon-badge">COMING SOON</span>
           </div>
           <div class="card-meta">
             <div>
               <span class="card-cat">FESTIVAL APP</span>
               <h4 class="card-title">GAUDIFEST</h4>
             </div>
-            <span class="arrow">&rarr;</span>
           </div>
-        </a>
+        </div>
 
       </section>
 
