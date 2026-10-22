@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nina Mondočková — Multimedia & Graphic Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="loading" data-theme="light">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ast" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
+      <path pathLength="1" d="M52 6 C50 22 51 36 49 54"/>
+      <path pathLength="1" d="M88 26 C74 34 60 44 48 53"/>
+      <path pathLength="1" d="M90 66 C76 62 62 58 49 52"/>
+      <path pathLength="1" d="M46 96 C47 80 48 66 50 52"/>
+      <path pathLength="1" d="M10 72 C24 66 38 58 51 52"/>
+      <path pathLength="1" d="M12 28 C26 36 38 44 51 53"/>
+    </g>
+  </symbol>
+</svg>
+
+<div id="loader">
+  <svg class="ast ld-ast" viewBox="0 0 100 100"><use href="#ast"/></svg>
+  <p class="mono ld-name">NINA MONDOČKOVÁ — PORTFOLIO</p>
+  <p class="ld-num"><span id="ldNum">000</span><small>%</small></p>
+</div>
+
+<div class="cursor" id="cursor"><span></span></div>
+<div id="floatImg"><img alt="" /></div>
+
+<div class="hud" aria-hidden="false">
+  <div class="progress"><i id="prog"></i></div>
+  <div class="hud-top mono"><span id="hudNum">01</span><span id="hudLabel" data-i="lab1">PORTFOLIO</span></div>
+  <div class="hud-bot mono">
+    <span id="hudCount">01 / 08</span>
+    <span class="lang"><button id="btn-en" onclick="setLanguage('en')">EN</button><button id="btn-dk" onclick="setLanguage('dk')">DK</button><button id="btn-sk" onclick="setLanguage('sk')">SK</button></span>
+  </div>
+</div>
+
+<main>
+
+<!-- 01 COVER -->
+<section class="pg cover" id="s1" data-theme="light" data-num="01" data-label="lab1">
+  <div class="cv-left">
+    <p class="mono cv-tag rv" data-i="cv_tag">MULTIMEDIA DESIGN & GRAPHIC DESIGN</p>
+    <h1 class="cv-name"><span class="split">NINA</span><span class="split">MONDOČKOVÁ</span></h1>
+    <i class="rule rv" style="--d:.5s"></i>
+    <nav class="cv-nav mono rv" style="--d:.6s">
+      <a href="#s4"><span data-i="nav_work">PORTFOLIO</span></a>
+      <a href="#s2"><span data-i="nav_about">ABOUT</span></a>
+      <a href="#s7"><span data-i="nav_contact">CONTACT</span></a>
+      <span class="arr">→</span>
+    </nav>
+    <ul class="cv-words mono rv" style="--d:.8s">
+      <li data-i="w1">VISUALS</li><li data-i="w2">IDEAS</li><li data-i="w3">STORIES</li>
+    </ul>
+  </div>
+  <figure class="cv-photo duo portrait" data-speed="-.05"><img id="coverImg" src="image/KI_mondockova_interactive/0001.jpg" alt="Nina Mondočková" /></figure>
+  <svg class="ast cv-ast draw" id="astCover" viewBox="0 0 100 100"><use href="#ast"/></svg>
+  <div class="marquee"><div class="mq-track" id="mq"></div></div>
+</section>
+
+<!-- 02 ABOUT -->
+<section class="pg about" id="s2" data-theme="light" data-num="02" data-label="lab2">
+  <div class="ab-text">
+    <h2 class="ab-h"><span class="split" data-i="ab_h1">HI,</span><span class="split" data-i="ab_h2">I'M NINA —</span></h2>
+    <i class="rule rv"></i>
+    <p class="mono body rv" data-i="ab_p1">I'm a multimedia design student with a background in graphic design. I love creating visual identities, print and digital materials and promotional content.</p>
+    <p class="mono body rv" data-i="ab_p2">During my studies and internship I work with Adobe Illustrator, Photoshop and InDesign, while developing my skills in UI/UX, web design and digital media.</p>
+    <div class="ab-edu mono rv">
+      <p class="k" data-i="ab_cur">Currently studying</p>
+      <p>Business Academy Aarhus<br><span data-i="ab_cur2">Multimedia Design</span></p>
+      <p class="k" data-i="ab_prev">Previous education</p>
+      <p data-i="ab_prev2">Private Secondary School of Art & Animation, Bratislava</p>
+    </div>
+    <div class="stats rv">
+      <div><b class="count" data-to="4">0</b><span class="mono" data-i="st1">YEARS OF STUDY</span></div>
+      <div><b class="count" data-to="2">0</b><span class="mono" data-i="st2">INTERNSHIPS</span></div>
+      <div><b class="count" data-to="6">0</b><span class="mono" data-i="st3">BRANDING PROJECTS</span></div>
+      <div><b class="count" data-to="5">0</b><span class="mono" data-i="st4">PRINT PROJECTS</span></div>
+    </div>
+  </div>
+  <div class="collage">
+    <figure class="cl a duo portrait" data-speed=".05"><img src="image/salvik.jpg" alt="" loading="lazy"></figure>
+    <figure class="cl b duo" data-speed="-.08"><img src="image/mondockova_eco.jpg" alt="" loading="lazy"></figure>
+    <figure class="cl c duo" data-speed=".1"><img src="image/final.jpg" alt="" loading="lazy"></figure>
+    <i class="tape t1"></i><i class="tape t2"></i>
+    <p class="hand quote" data-speed="-.04"><span data-i="quote">Design is how I see the world.</span></p>
+    <svg class="hand-arrow draw" viewBox="0 0 80 80"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path pathLength="1" d="M8 70 C18 52 34 30 66 12"/><path pathLength="1" d="M66 12 L46 14"/><path pathLength="1" d="M66 12 L62 32"/></g></svg>
+  </div>
+</section>
+
+<!-- 03 SELECTED PROJECTS (horizontal) -->
+<section class="pg hs" id="s3" data-theme="dark" data-num="03" data-label="lab3">
+  <div class="hs-sticky">
+    <div class="hs-track" id="hsTrack"></div>
+    <div class="hs-bar"><i id="hsBar"></i></div>
+  </div>
+</section>
+
+<!-- 04 GRID -->
+<section class="pg grid" id="s4" data-theme="light" data-num="04" data-label="lab4">
+  <div class="gr-head">
+    <h2 class="gr-h"><span class="split" data-i="gr_h">Portfolio</span></h2>
+    <div class="filters mono rv" id="filters"></div>
+  </div>
+  <div class="tiles" id="tiles"></div>
+</section>
+
+<!-- 05 SKILLS -->
+<section class="pg skills" id="s5" data-theme="dark" data-num="05" data-label="lab5">
+  <div class="sk-left">
+    <div class="apps">
+      <div class="app rv" style="--d:.0s">Ai</div><div class="app rv" style="--d:.08s">Ps</div><div class="app rv" style="--d:.16s">Id</div><div class="app rv" style="--d:.24s">Ae</div>
+    </div>
+    <div class="rows" id="skillRows"></div>
+  </div>
+  <div class="sk-right">
+    <svg class="scrib draw" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path pathLength="1" d="M10 100 L72 18"/><path pathLength="1" d="M26 108 L100 40"/><path pathLength="1" d="M44 96 L58 70 L72 92 L92 60"/><path pathLength="1" d="M20 70 L60 100"/></g></svg>
+    <svg class="scrib2 ast draw" viewBox="0 0 100 100"><use href="#ast"/></svg>
+    <div class="sk-cols mono rv">
+      <div><p class="k" data-i="sk_lang">LANGUAGES</p><p>Slovak</p><p>English</p><p></p></div>
+      <div><p class="k" data-i="sk_dev">DEVELOPING</p><p>UI/UX</p><p data-i="sk_web">Web design</p><p data-i="sk_dig">Digital media</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 EXPERIENCE -->
+<section class="pg exp" id="s6" data-theme="light" data-num="06" data-label="lab6">
+  <h2 class="gr-h"><span class="split" data-i="ex_h">Experience</span></h2>
+  <div class="ex-list" id="expList"></div>
+</section>
+
+<!-- 07 CONTACT -->
+<section class="pg contact" id="s7" data-theme="light" data-num="07" data-label="lab7">
+  <div class="ct-top">
+    <figure class="ct-img duo" data-speed="-.06"><img src="image/KI_mondockova_interactive/0014.jpg" alt="" loading="lazy"></figure>
+    <svg class="ast ct-ast draw" id="astContact" viewBox="0 0 100 100"><use href="#ast"/></svg>
+  </div>
+  <h2 class="ct-h"><span class="split" data-i="ct_h1">GET IN</span><span class="split" data-i="ct_h2">TOUCH</span></h2>
+  <div class="ct-info mono rv">
+    <a class="ct-mail mag" href="mailto:nina.mondockova@gmail.com">nina.mondockova@gmail.com</a>
+    <p><a href="tel:+421904482803">(+421) 904 482 803</a></p>
+    <p>Aarhus, Denmark · <span data-i="ct_time">LOCAL TIME</span> <b id="clock">--:--</b></p>
+    <button class="btn mag" id="copyBtn" data-i="ct_copy">COPY EMAIL</button>
+  </div>
+  <p class="hand thanks" data-speed="-.05"><span data-i="ct_thanks">Thanks for watching :)</span></p>
+</section>
+
+<!-- 08 END -->
+<section class="pg end" id="s8" data-theme="dark" data-num="08" data-label="lab8">
+  <canvas id="waves"></canvas>
+  <div class="end-in">
+    <svg class="ast end-ast draw" viewBox="0 0 100 100"><use href="#ast"/></svg>
+    <p class="end-name">NINA MONDOČKOVÁ</p>
+    <p class="mono end-sub" data-i="end_sub">PORTFOLIO</p>
+    <a href="#s1" class="mono end-top mag" data-i="to_top">BACK TO TOP ↑</a>
+  </div>
+</section>
+
+</main>
+
+<!-- PROJECT MODAL -->
+<div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <button class="m-close mono" id="mClose">✕ <span id="mCloseT">CLOSE</span></button>
+  <div class="m-grid">
+    <div class="m-media">
+      <div class="m-stage" id="mStage"></div>
+      <div class="m-thumbs" id="mThumbs"></div>
+    </div>
+    <div class="m-info">
+      <p class="mono m-num" id="mNum">03 / 13</p>
+      <h3 id="mTitle"></h3>
+      <p class="mono" id="mCat"></p>
+      <p class="m-desc mono" id="mDesc"></p>
+      <dl class="m-meta mono" id="mMeta"></dl>
+      <div class="tags mono" id="mTags"></div>
+      <div class="m-links mono" id="mLinks"></div>
+      <div class="m-pn"><button id="mPrev" class="mono">← <span id="mPrevT">PREV</span></button><button id="mNext" class="mono"><span id="mNextT">NEXT</span> →</button></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
