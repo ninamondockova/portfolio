@@ -13,7 +13,7 @@ var I = {
   en: {
     lab1: 'PORTFOLIO', lab2: 'ABOUT ME', lab3: 'SELECTED PROJECTS', lab4: 'ALL WORK', lab5: 'SKILLS', lab6: 'EXPERIENCE', lab7: "LET'S WORK TOGETHER", lab8: 'THANK YOU',
     cv_tag: 'MULTIMEDIA DESIGN & GRAPHIC DESIGN', nav_work: 'PORTFOLIO', nav_about: 'ABOUT', nav_contact: 'CONTACT', w1: 'VISUALS', w2: 'IDEAS', w3: 'STORIES',
-    ab_h1: 'HI,', ab_h2: "I'M NINA —",
+    ab_h1: 'HI,', ab_h2: "I'M NINA",
     ab_p1: "I'm a multimedia design student with a background in graphic design. I love creating visual identities, print and digital materials and promotional content.",
     ab_p2: 'During my studies and internship I work with Adobe Illustrator, Photoshop and InDesign, while developing my skills in UI/UX, web design and digital media.',
     ab_cur: 'Currently studying', ab_cur2: 'Multimedia Design', ab_prev: 'Previous education', ab_prev2: 'Private Secondary School of Art & Animation, Bratislava',
@@ -31,7 +31,7 @@ var I = {
   sk: {
     lab1: 'PORTFÓLIO', lab2: 'O MNE', lab3: 'VYBRANÉ PROJEKTY', lab4: 'VŠETKY PRÁCE', lab5: 'ZRUČNOSTI', lab6: 'SKÚSENOSTI', lab7: 'POĎME TVORIŤ SPOLU', lab8: 'ĎAKUJEM',
     cv_tag: 'MULTIMEDIÁLNY DIZAJN & GRAFICKÝ DIZAJN', nav_work: 'PORTFÓLIO', nav_about: 'O MNE', nav_contact: 'KONTAKT', w1: 'VIZUÁLY', w2: 'NÁPADY', w3: 'PRÍBEHY',
-    ab_h1: 'AHOJ,', ab_h2: 'SOM NINA —',
+    ab_h1: 'AHOJ,', ab_h2: 'SOM NINA',
     ab_p1: 'Som študentka multimediálneho dizajnu so základom v grafickom dizajne. Rada tvorím vizuálne identity, tlačové a digitálne materiály a reklamný obsah.',
     ab_p2: 'Počas štúdia a stáže pracujem s Adobe Illustrator, Photoshop a InDesign a rozvíjam sa v UI/UX, webdizajne a digitálnych médiách.',
     ab_cur: 'Momentálne študujem', ab_cur2: 'Multimedia Design', ab_prev: 'Predchádzajúce vzdelanie', ab_prev2: 'Súkromná SŠ umelecko-animovanej tvorby, Bratislava',
@@ -49,7 +49,7 @@ var I = {
   dk: {
     lab1: 'PORTEFØLJE', lab2: 'OM MIG', lab3: 'UDVALGTE PROJEKTER', lab4: 'ALT ARBEJDE', lab5: 'FÆRDIGHEDER', lab6: 'ERFARING', lab7: 'LAD OS ARBEJDE SAMMEN', lab8: 'TAK',
     cv_tag: 'MULTIMEDIEDESIGN & GRAFISK DESIGN', nav_work: 'PORTEFØLJE', nav_about: 'OM MIG', nav_contact: 'KONTAKT', w1: 'VISUALS', w2: 'IDEER', w3: 'HISTORIER',
-    ab_h1: 'HEJ,', ab_h2: 'JEG ER NINA —',
+    ab_h1: 'HEJ,', ab_h2: 'JEG ER NINA',
     ab_p1: 'Jeg er multimediedesignstuderende med baggrund i grafisk design. Jeg elsker at skabe visuelle identiteter, trykte og digitale materialer og reklameindhold.',
     ab_p2: 'Under mine studier og praktik arbejder jeg med Adobe Illustrator, Photoshop og InDesign og udvikler mine færdigheder inden for UI/UX, webdesign og digitale medier.',
     ab_cur: 'Studerer lige nu', ab_cur2: 'Multimediedesign', ab_prev: 'Tidligere uddannelse', ab_prev2: 'Privat gymnasium for kunst & animation, Bratislava',
@@ -73,39 +73,6 @@ var P = [
   { id: 'fruitiq', cat: 'brand', catL: L('BRANDING, PACKAGING', 'BRANDING, OBALY', 'BRANDING, EMBALLAGE'), title: 'Fruitiq',
     desc: L('Delivery of exotic fruits from all over the world. An identity system built around vibrant organic forms and clean typography.', 'Doručovanie exotického ovocia z celého sveta. Identita postavená na živých organických tvaroch a čistej typografii.', 'Levering af eksotiske frugter fra hele verden. Et identitetssystem bygget på levende organiske former og ren typografi.'),
     meta: [['m_scope', 'Branding, Packaging']], thumb: 'image/fruitiq.jpg', imgs: ['image/KI_mondockova_interactive/0001.jpg', 'image/KI_mondockova_interactive/0014.jpg', 'image/KI_mondockova_interactive/0021.jpg'], pdf: 'image/KI_mondockova_interactive.pdf', tags: ['BRANDING', 'PACKAGING'] },
-  { id: 'smiechko', cat: 'brand', catL: L('BRANDING & VISUAL IDENTITY', 'BRANDING & DIZAJN IDENTÍT', 'BRANDING & VISUEL IDENTITET'), title: 'Smiechko',
-    desc: L('Complete visual identity and brand manual: logo, color palette, typography, applications on print and promo materials, and a 50-page guidelines manual.', 'Kompletná vizuálna identita a dizajn manuál: logotyp, farebná paleta, typografia, aplikácie na tlačoviny a reklamné predmety a 50-stranový manuál.', 'Komplet visuel identitet og brand manual: logo, farvepalette, typografi, applikationer på tryksager og en 50-siders brand manual.'),
-    meta: [['m_year', '2025'], ['m_scope', 'Branding, Guidelines'], ['m_role', 'Lead Designer']], thumb: 'image/smiechko.jpg', imgs: ['image/smiechko.jpg'], pdf: 'image/smiechko.pdf', tags: ['BRANDING', 'GUIDELINES'] },
-  { id: 'catchles', cat: 'brand', catL: L('VISUAL IDENTITY', 'VIZUÁLNA IDENTITA', 'VISUEL IDENTITET'), title: 'Catchles',
-    desc: L('Complete visual identity for the Catchles project: logo, visual style, typography and application assets for a modern brand presentation.', 'Kompletná vizuálna identita pre projekt Catchles: logo, vizuálny štýl, typografia a aplikačné prvky.', 'Komplet visuel identitet for Catchles: logo, visuel stil, typografi og applikationselementer.'),
-    meta: [['m_year', '2025'], ['m_scope', 'Visual Identity, Branding'], ['m_role', 'Graphic Designer']], thumb: 'image/catchles.jpg', imgs: ['image/catchles.jpg'], pdf: 'image/catchles.pdf', tags: ['VISUAL IDENTITY', 'BRANDING'] },
-  { id: 'mrazima', cat: 'brand', catL: L('BRANDING & PACKAGING', 'BRANDING & OBALY', 'BRANDING & EMBALLAGE'), title: 'Mrazima',
-    desc: L('Visual identity system and packaging design: logo, color system, typography, packaging assets and full brand guidelines.', 'Systém vizuálnej identity a obalový dizajn: logo, farebný systém, typografia, obaly a kompletný dizajn manuál.', 'Visuelt identitetssystem og emballagedesign: logo, farvesystem, typografi, emballage og brand guidelines.'),
-    meta: [['m_year', '2024'], ['m_scope', 'Branding, Packaging'], ['m_role', 'Graphic Designer']], thumb: 'image/mrazima.jpg', imgs: ['image/mrazima.jpg', 'image/DM/0001.jpg'], pdf: 'image/mrazima.pdf', tags: ['BRANDING', 'PACKAGING'] },
-  { id: 'salvik', cat: 'brand', catL: L('VISUAL IDENTITY', 'VIZUÁLNA IDENTITA', 'VISUEL IDENTITET'), title: 'Salvik',
-    desc: L('Complete visual identity for the Salvik brand: logo, typography, color palette, corporate stationery and full brand guidelines.', 'Kompletná vizuálna identita pre značku Salvik: logo, typografia, farebná paleta, firemné tlačoviny a dizajn manuál.', 'Komplet visuel identitet for Salvik: logo, typografi, farvepalette, tryksager og brand guidelines.'),
-    meta: [['m_year', '2023'], ['m_scope', 'Visual Identity, Branding'], ['m_role', 'Graphic Designer']], thumb: 'image/salvik.jpg', imgs: ['image/salvik.jpg'], pdf: 'image/salvik.pdf', tags: ['VISUAL IDENTITY', 'BRANDING'] },
-  { id: 'ballk', cat: 'brand', catL: L('INFORMATION SYSTEM', 'INFORMAČNÝ SYSTÉM', 'INFORMATIONSSYSTEM'), title: 'Ballk',
-    desc: L('Information system design and visual wayfinding: orientation elements, pictograms, typographic rules and documentation.', 'Dizajn informačného systému a vizuálnej navigácie: orientačný systém, piktogramy, typografické pravidlá a dokumentácia.', 'Informationssystemdesign og visuel wayfinding: orienteringselementer, piktogrammer, typografiske regler og dokumentation.'),
-    meta: [['m_year', '2023'], ['m_scope', 'Info System, Wayfinding'], ['m_role', 'Graphic Designer']], thumb: 'image/ballk.jpg', imgs: ['image/ballk.jpg', 'image/IS/0001.jpg'], pdf: 'image/IS.pdf', tags: ['INFO SYSTEM', 'WAYFINDING'] },
-  { id: 'nutrivictus', cat: 'print', catL: L('CATALOG / EDITORIAL', 'KATALÓG & EDITORIÁL', 'KATALOG / EDITORIELT'), title: 'Nutrivictus',
-    desc: L('Complete product catalog: typography rules, clean multi-column layouts, category color coding and print-ready preparation. 10 pages.', 'Kompletný produktový katalóg: typografia, prehľadná mriežka, farebné kódovanie kategórií a príprava na tlač. 10 strán.', 'Komplet produktkatalog: typografi, rene layouts, farvekodning af kategorier og klargøring til tryk. 10 sider.'),
-    meta: [['m_year', '2023'], ['m_scope', 'Catalog, Print Layout'], ['m_role', 'Editorial Designer']], thumb: 'image/katalog.jpg', imgs: ['image/katalog.jpg'], pdf: 'image/katalog_mondockova_interactive.pdf', tags: ['CATALOG', 'PRINT'] },
-  { id: 'tokyoade', cat: 'print', catL: L('MUSIC FESTIVAL', 'HUDOBNÝ FESTIVAL', 'MUSIKFESTIVAL'), title: 'Tokyoade',
-    desc: L('Visual identity and print materials for the Tokyoade music festival: posters, tickets, program guides and merchandise.', 'Vizuálna identita a tlačové materiály pre hudobný festival Tokyoade: plagáty, vstupenky, brožúry a merch.', 'Visuel identitet og tryksager til musikfestivalen Tokyoade: plakater, billetter, programmer og merchandise.'),
-    meta: [['m_year', '2023'], ['m_scope', 'Posters, Event Print'], ['m_role', 'Graphic Designer']], thumb: 'image/tokyoade_plagat_v1.jpg', imgs: ['image/tokyoade_plagat_v1.jpg'], pdf: 'image/mockup.jpg', tags: ['POSTERS', 'EVENT PRINT'] },
-  { id: 'greek', cat: 'print', catL: L('MAGAZINE / EDITORIAL', 'ČASOPIS & EDITORIÁL', 'MAGASIN / EDITORIELT'), title: 'Greek Magazine',
-    desc: L('A cultural magazine about ancient Greece and its impact on modern visual culture: typography grid, photo curation and cover design.', 'Kultúrny magazín o antickom Grécku a jeho vplyve na modernú vizuálnu kultúru: typografická skladba, výber fotografií a obálka.', 'Et kulturmagasin om det antikke Grækenland og dets indflydelse på moderne visuel kultur: typografisk gitter, fotokuratering og omslag.'),
-    meta: [['m_year', '2024'], ['m_scope', 'Magazine, Editorial'], ['m_role', 'Layout Designer, Illustrator']], thumb: 'image/Aftedita.jpg', imgs: ['image/Aftedita.jpg'], pdf: 'image/casopis.pdf', tags: ['MAGAZINE', 'EDITORIAL'] },
-  { id: 'alphabet', cat: 'print', catL: L('TYPOGRAPHY & TYPE DESIGN', 'TYPOGRAFIA & PÍSMO', 'TYPOGRAFI & SKRIFTDESIGN'), title: 'Own Alphabet',
-    desc: L('Custom typeface designed from first sketches to final vector metrics. A study on letterforms, proportions and print specimen poster design.', 'Autorská abeceda od skíc po finálnu vektorovú podobu. Štúdia tvaroslovia, proporcií písma a jeho aplikácia na tlačový vzorník.', 'Specialdesignet alfabet fra de første skitser til de endelige vektorer. Et studie i bogstavformer og proportioner.'),
-    meta: [['m_year', '2022'], ['m_scope', 'Type Design, Print Specimen'], ['m_role', 'Type Designer']], thumb: 'image/alphabet.jpg', imgs: ['image/alphabet.jpg'], pdf: 'image/alphabet.pdf', tags: ['TYPE DESIGN', 'SPECIMEN'] },
-  { id: 'posters', cat: 'print', catL: L('POSTERS & GRAPHICS', 'PLAGÁTY & GRAFIKA', 'PLAKATER & GRAFIK'), title: 'Posters Collection',
-    desc: L('A collection of artistic and ecological posters: modern typographic structure, eco-social themes and strong visual messages.', 'Séria umeleckých a ekologických plagátov: moderné typografické rozvrhnutie, spoločensko-ekologické témy a výrazná vizuálna výpoveď.', 'En samling af kunstneriske og økologiske plakater: moderne typografisk struktur, øko-sociale temaer og stærke budskaber.'),
-    meta: [['m_year', '2022 – 2023'], ['m_scope', 'Poster Design, Artwork'], ['m_role', 'Graphic Designer']], thumb: 'image/mondockova_eco.jpg', imgs: ['image/mondockova_eco.jpg'], pdf: 'image/mondockova_eco.pdf', tags: ['POSTERS', 'ARTWORK'] },
-  { id: 'mystical', cat: 'ui', catL: L('MOBILE GAME, UI/UX DESIGN', 'MOBILNÁ HRA, UI/UX DESIGN', 'MOBILSPIL, UI/UX DESIGN'), title: 'Mystical Creatures',
-    desc: L('An immersive mobile game experience built around mythical worldbuilding, intuitive user interfaces and engaging character interactions.', 'Pohlcujúci zážitok z mobilnej hry zameraný na mytologický svet, intuitívne rozhranie a pútavé interakcie s postavami.', 'En fordybende mobilspiloplevelse om mytisk verdenbygning, intuitive brugerflader og engagerende karakterinteraktioner.'),
-    meta: [['m_year', '2025'], ['m_scope', 'Mobile Game, UI/UX'], ['m_role', 'UI/UX Designer']], thumb: 'image/final.jpg', imgs: ['image/final.jpg'], pdf: null, tags: ['MOBILE GAME', 'UI/UX'] },
   { id: 'superzoo', cat: 'intern', catL: L('INTERNSHIP WORK', 'STÁŽ & SKÚSENOSTI', 'PRAKTIK ARBEJDE'), title: 'Super Zoo',
     desc: L('Projects, marketing campaigns and design assets developed during my internship: online banners, PPC ads, social media, in-app banners, a DL flyer and an animation.', 'Projekty, marketingové kampane a dizajnové podklady zo stáže: online bannery, PPC reklamy, sociálne siete, app bannery, DL leták a animácia.', 'Projekter, kampagner og designaktiver fra min praktik: onlinebannere, PPC-annoncer, sociale medier, app-bannere, DL brochure og animation.'),
     meta: [['m_year', '2023 / 2024'], ['m_scope', 'Digital, Social Media, Print'], ['m_role', 'Graphic Designer Intern']], thumb: 'image/banner3.png', imgs: ['image/banner3.png'], pdf: null, tags: ['PRINT', 'DIGITAL', 'ANIMATION', 'SOCIAL MEDIA'],
@@ -116,7 +83,41 @@ var P = [
       { k: 't_some', files: [1, 2, 3, 4].map(function (n) { return 'image/some' + n + '.png'; }) },
       { k: 't_app', files: ['1-1', '1-2', '1-3', '1-4', '1-5', '1-6', '1-7', '1-8', '2-1', '2-2', '2-3', '2-4'].map(function (n) { return 'image/' + n + '.png'; }) },
       { k: 't_video', video: 'image/superzoo-showcase.mp4', poster: 'image/superzoo_animation-poster.jpg' }
-    ] }
+    ] },
+  { id: 'mystical', cat: 'ui', catL: L('MOBILE GAME, UI/UX DESIGN', 'MOBILNÁ HRA, UI/UX DESIGN', 'MOBILSPIL, UI/UX DESIGN'), title: 'Mystical Creatures',
+    desc: L('An immersive mobile game experience built around mythical worldbuilding, intuitive user interfaces and engaging character interactions.', 'Pohlcujúci zážitok z mobilnej hry zameraný na mytologický svet, intuitívne rozhranie a pútavé interakcie s postavami.', 'En fordybende mobilspiloplevelse om mytisk verdenbygning, intuitive brugerflader og engagerende karakterinteraktioner.'),
+    meta: [['m_year', '2025'], ['m_scope', 'Mobile Game, UI/UX'], ['m_role', 'UI/UX Designer']], thumb: 'image/final.jpg', imgs: ['image/final.jpg'], pdf: null, tags: ['MOBILE GAME', 'UI/UX'] },
+  { id: 'smiechko', cat: 'brand', catL: L('BRANDING & VISUAL IDENTITY', 'BRANDING & DIZAJN IDENTÍT', 'BRANDING & VISUEL IDENTITET'), title: 'Smiechko',
+    desc: L('Complete visual identity and brand manual: logo, color palette, typography, applications on print and promo materials, and a 50-page guidelines manual.', 'Kompletná vizuálna identita a dizajn manuál: logotyp, farebná paleta, typografia, aplikácie na tlačoviny a reklamné predmety a 50-stranový manuál.', 'Komplet visuel identitet og brand manual: logo, farvepalette, typografi, applikationer på tryksager og en 50-siders brand manual.'),
+    meta: [['m_year', '2025'], ['m_scope', 'Branding, Guidelines'], ['m_role', 'Lead Designer']], thumb: 'image/smiechko.jpg', imgs: ['image/smiechko.jpg'], pdf: 'image/smiechko.pdf', tags: ['BRANDING', 'GUIDELINES'] },
+  { id: 'nutrivictus', cat: 'print', catL: L('CATALOG / EDITORIAL', 'KATALÓG & EDITORIÁL', 'KATALOG / EDITORIELT'), title: 'Nutrivictus',
+    desc: L('Complete product catalog: typography rules, clean multi-column layouts, category color coding and print-ready preparation. 10 pages.', 'Kompletný produktový katalóg: typografia, prehľadná mriežka, farebné kódovanie kategórií a príprava na tlač. 10 strán.', 'Komplet produktkatalog: typografi, rene layouts, farvekodning af kategorier og klargøring til tryk. 10 sider.'),
+    meta: [['m_year', '2023'], ['m_scope', 'Catalog, Print Layout'], ['m_role', 'Editorial Designer']], thumb: 'image/katalog.jpg', imgs: ['image/katalog.jpg'], pdf: 'image/katalog_mondockova_interactive.pdf', tags: ['CATALOG', 'PRINT'] },
+  { id: 'catchles', cat: 'brand', catL: L('VISUAL IDENTITY', 'VIZUÁLNA IDENTITA', 'VISUEL IDENTITET'), title: 'Catchles',
+    desc: L('Complete visual identity for the Catchles project: logo, visual style, typography and application assets for a modern brand presentation.', 'Kompletná vizuálna identita pre projekt Catchles: logo, vizuálny štýl, typografia a aplikačné prvky.', 'Komplet visuel identitet for Catchles: logo, visuel stil, typografi og applikationselementer.'),
+    meta: [['m_year', '2025'], ['m_scope', 'Visual Identity, Branding'], ['m_role', 'Graphic Designer']], thumb: 'image/catchles.jpg', imgs: ['image/catchles.jpg'], pdf: 'image/catchles.pdf', tags: ['VISUAL IDENTITY', 'BRANDING'] },
+  { id: 'mrazima', cat: 'brand', catL: L('BRANDING & PACKAGING', 'BRANDING & OBALY', 'BRANDING & EMBALLAGE'), title: 'Mrazima',
+    desc: L('Visual identity system and packaging design: logo, color system, typography, packaging assets and full brand guidelines.', 'Systém vizuálnej identity a obalový dizajn: logo, farebný systém, typografia, obaly a kompletný dizajn manuál.', 'Visuelt identitetssystem og emballagedesign: logo, farvesystem, typografi, emballage og brand guidelines.'),
+    meta: [['m_year', '2024'], ['m_scope', 'Branding, Packaging'], ['m_role', 'Graphic Designer']], thumb: 'image/mrazima.jpg', imgs: ['image/mrazima.jpg', 'image/DM/0001.jpg'], pdf: 'image/mrazima.pdf', tags: ['BRANDING', 'PACKAGING'] },
+  { id: 'greek', cat: 'print', catL: L('MAGAZINE / EDITORIAL', 'ČASOPIS & EDITORIÁL', 'MAGASIN / EDITORIELT'), title: 'Greek Magazine',
+    desc: L('A cultural magazine about ancient Greece and its impact on modern visual culture: typography grid, photo curation and cover design.', 'Kultúrny magazín o antickom Grécku a jeho vplyve na modernú vizuálnu kultúru: typografická skladba, výber fotografií a obálka.', 'Et kulturmagasin om det antikke Grækenland og dets indflydelse på moderne visuel kultur: typografisk gitter, fotokuratering og omslag.'),
+    meta: [['m_year', '2024'], ['m_scope', 'Magazine, Editorial'], ['m_role', 'Layout Designer, Illustrator']], thumb: 'image/Aftedita.jpg', imgs: ['image/Aftedita.jpg'], pdf: 'image/casopis.pdf', tags: ['MAGAZINE', 'EDITORIAL'] },
+  { id: 'tokyoade', cat: 'print', catL: L('MUSIC FESTIVAL', 'HUDOBNÝ FESTIVAL', 'MUSIKFESTIVAL'), title: 'Tokyoade',
+    desc: L('Visual identity and print materials for the Tokyoade music festival: posters, tickets, program guides and merchandise.', 'Vizuálna identita a tlačové materiály pre hudobný festival Tokyoade: plagáty, vstupenky, brožúry a merch.', 'Visuel identitet og tryksager til musikfestivalen Tokyoade: plakater, billetter, programmer og merchandise.'),
+    meta: [['m_year', '2023'], ['m_scope', 'Posters, Event Print'], ['m_role', 'Graphic Designer']], thumb: 'image/tokyoade_plagat_v1.jpg', imgs: ['image/tokyoade_plagat_v1.jpg'], pdf: 'image/mockup.jpg', tags: ['POSTERS', 'EVENT PRINT'] },
+  { id: 'salvik', cat: 'brand', catL: L('VISUAL IDENTITY', 'VIZUÁLNA IDENTITA', 'VISUEL IDENTITET'), title: 'Salvik',
+    desc: L('Complete visual identity for the Salvik brand: logo, typography, color palette, corporate stationery and full brand guidelines.', 'Kompletná vizuálna identita pre značku Salvik: logo, typografia, farebná paleta, firemné tlačoviny a dizajn manuál.', 'Komplet visuel identitet for Salvik: logo, typografi, farvepalette, tryksager og brand guidelines.'),
+    meta: [['m_year', '2023'], ['m_scope', 'Visual Identity, Branding'], ['m_role', 'Graphic Designer']], thumb: 'image/salvik.jpg', imgs: ['image/salvik.jpg'], pdf: 'image/salvik.pdf', tags: ['VISUAL IDENTITY', 'BRANDING'] },
+  { id: 'ballk', cat: 'brand', catL: L('INFORMATION SYSTEM', 'INFORMAČNÝ SYSTÉM', 'INFORMATIONSSYSTEM'), title: 'Ballk',
+    desc: L('Information system design and visual wayfinding: orientation elements, pictograms, typographic rules and documentation.', 'Dizajn informačného systému a vizuálnej navigácie: orientačný systém, piktogramy, typografické pravidlá a dokumentácia.', 'Informationssystemdesign og visuel wayfinding: orienteringselementer, piktogrammer, typografiske regler og dokumentation.'),
+    meta: [['m_year', '2023'], ['m_scope', 'Info System, Wayfinding'], ['m_role', 'Graphic Designer']], thumb: 'image/ballk.jpg', imgs: ['image/ballk.jpg', 'image/IS/0001.jpg'], pdf: 'image/IS.pdf', tags: ['INFO SYSTEM', 'WAYFINDING'] },
+  { id: 'posters', cat: 'print', catL: L('POSTERS & GRAPHICS', 'PLAGÁTY & GRAFIKA', 'PLAKATER & GRAFIK'), title: 'Posters Collection',
+    desc: L('A collection of artistic and ecological posters: modern typographic structure, eco-social themes and strong visual messages.', 'Séria umeleckých a ekologických plagátov: moderné typografické rozvrhnutie, spoločensko-ekologické témy a výrazná vizuálna výpoveď.', 'En samling af kunstneriske og økologiske plakater: moderne typografisk struktur, øko-sociale temaer og stærke budskaber.'),
+    meta: [['m_year', '2022 – 2023'], ['m_scope', 'Poster Design, Artwork'], ['m_role', 'Graphic Designer']], thumb: 'image/mondockova_eco.jpg', imgs: ['image/mondockova_eco.jpg'], pdf: 'image/mondockova_eco.pdf', tags: ['POSTERS', 'ARTWORK'] },
+  { id: 'alphabet', cat: 'print', catL: L('TYPOGRAPHY & TYPE DESIGN', 'TYPOGRAFIA & PÍSMO', 'TYPOGRAFI & SKRIFTDESIGN'), title: 'Own Alphabet',
+    desc: L('Custom typeface designed from first sketches to final vector metrics. A study on letterforms, proportions and print specimen poster design.', 'Autorská abeceda od skíc po finálnu vektorovú podobu. Štúdia tvaroslovia, proporcií písma a jeho aplikácia na tlačový vzorník.', 'Specialdesignet alfabet fra de første skitser til de endelige vektorer. Et studie i bogstavformer og proportioner.'),
+    meta: [['m_year', '2022'], ['m_scope', 'Type Design, Print Specimen'], ['m_role', 'Type Designer']], thumb: 'image/alphabet.jpg', imgs: ['image/alphabet.jpg'], pdf: 'image/alphabet.pdf', tags: ['TYPE DESIGN', 'SPECIMEN'] }
+
 ];
 var SOON = ['Poked', 'Gaudifest'];
 var FEATURED = ['fruitiq', 'smiechko', 'catchles', 'mrazima', 'salvik', 'ballk'];
@@ -141,11 +142,15 @@ function renderFilters() {
     return '<button data-f="' + c[0] + '" class="' + (FILTER === c[0] ? 'on' : '') + '">' + esc(t(c[1])) + '</button>';
   }).join('');
 }
+function year(p) {
+  var m = (p.meta || []).filter(function (x) { return x[0] === 'm_year'; })[0];
+  return m ? m[1] : '';
+}
 function renderTiles() {
   $('#tiles').innerHTML = P.map(function (p) {
     return '<a class="tile" href="#' + p.id + '" data-id="' + p.id + '" data-cat="' + p.cat + '"' + (FILTER === 'all' || FILTER === p.cat ? '' : ' hidden') + '>' +
       '<div class="img"><img src="' + p.thumb + '" alt="' + esc(p.title) + '" loading="lazy"></div>' +
-      '<b>' + esc(p.title) + '</b><small>' + esc(pick(p.catL)) + '</small></a>';
+      '<div class="t-meta"><b>' + esc(p.title) + '</b><span class="t-yr">' + esc(year(p)) + '</span></div><small>' + esc(pick(p.catL)) + '</small></a>';
   }).join('');
 }
 function renderAbout() {

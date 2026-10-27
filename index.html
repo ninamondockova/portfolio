@@ -6,10 +6,17 @@
 <title>Nina Mondočková — Multimedia & Graphic Design</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css" />
+<script>document.documentElement.classList.add("js","is-loading")</script>
 </head>
 <body>
+
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="ld-top"><span>Nina Mondočková</span><span>Portfolio ©2026</span></div>
+  <div class="ld-num"><span id="ldNum">0</span><small>%</small></div>
+  <div class="ld-bar"><i id="ldBar"></i></div>
+</div>
 
 <header class="top">
   <a href="#" class="logo">Nina Mondočková</a>
@@ -23,10 +30,36 @@
 
 <main>
   <section class="intro wrap">
+    <div class="hero">
+      <svg class="badge" viewBox="0 0 120 120" aria-hidden="true">
+        <defs><path id="circ" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+        <text><textPath href="#circ">Nina Mondočková · Graphic designer ·</textPath></text>
+      </svg>
+      <h1 class="wm" aria-label="Portfolio">
+        <span class="l1" aria-hidden="true"><b>P</b><b>O</b><b>R</b><b>T</b></span>
+        <span class="l2" aria-hidden="true"><b>F</b><b>O</b><b>L</b><b>I</b><b class="ol">O</b></span>
+      </h1>
+      <span class="years">(2022 — 2026)</span>
+      <i class="star s1" aria-hidden="true"></i>
+      <i class="star s2" aria-hidden="true"></i>
+      <i class="star s3" aria-hidden="true"></i>
+      <div class="strip">
+        <a href="mailto:nina.mondockova@gmail.com"><i>@</i>nina.mondockova@gmail.com</a>
+        <a href="tel:+421904482803"><i>☎</i>(+421) 904 482 803</a>
+        <span><i>◎</i>Aarhus, Denmark</span>
+      </div>
+    </div>
     <p class="label" data-i="cv_tag">Multimedia design & graphic design</p>
-    <h1><span data-i="ab_h1">Hi,</span> <span data-i="ab_h2">I'm Nina —</span></h1>
+    <p class="hi"><span data-i="ab_h1">Hi,</span> <span data-i="ab_h2">I'm Nina</span></p>
     <p class="lead" data-i="ab_p1"></p>
   </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Branding <i>✦</i> Packaging <i>✦</i> Print <i>✦</i> UI/UX <i>✦</i> Visual identity <i>✦</i> Social media <i>✦</i> </span>
+      <span>Branding <i>✦</i> Packaging <i>✦</i> Print <i>✦</i> UI/UX <i>✦</i> Visual identity <i>✦</i> Social media <i>✦</i> </span>
+    </div>
+  </div>
 
   <section id="work" class="wrap">
     <div class="sec-head">
@@ -92,5 +125,6 @@
 </div>
 
 <script src="script.js"></script>
+<script src="motion.js"></script>
 </body>
 </html>
