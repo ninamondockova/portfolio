@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nina Mondočková - Multimedia & Graphic Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<script>document.documentElement.classList.add("js","is-loading")</script>
+</head>
+<body>
+
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="ld-top"><span>Nina Mondočková</span><span>Portfolio ©2026</span></div>
+  <div class="ld-num"><span id="ldNum">0</span><small>%</small></div>
+  <div class="ld-bar"><i id="ldBar"></i></div>
+</div>
+
+<header class="top">
+  <a href="#" class="logo">Nina Mondočková</a>
+  <nav>
+    <a href="#work" data-i="nav_work">Portfolio</a>
+    <a href="#about" data-i="nav_about">About</a>
+    <a href="#contact" data-i="nav_contact">Contact</a>
+  </nav>
+  <div class="lang"><button id="btn-en" onclick="setLanguage('en')">EN</button><button id="btn-dk" onclick="setLanguage('dk')">DK</button><button id="btn-sk" onclick="setLanguage('sk')">SK</button></div>
+</header>
+
+<main>
+  <section class="intro wrap">
+    <div class="hero">
+      <h1 class="wm" aria-label="Portfolio">
+        <span class="l1" aria-hidden="true"><b>P</b><b>O</b><b>R</b><b>T</b></span>
+        <span class="l2" aria-hidden="true"><b>F</b><b>O</b><b>L</b><b>I</b><b class="ol">O</b></span>
+      </h1>
+      <span class="years">(2022 - 2026)</span>
+      <i class="star s1" aria-hidden="true"></i>
+      <i class="star s2" aria-hidden="true"></i>
+      <i class="star s3" aria-hidden="true"></i>
+      <div class="strip">
+        <a href="mailto:nina.mondockova@gmail.com"><i>@</i>nina.mondockova@gmail.com</a>
+        <a href="tel:+421904482803"><i>☎</i>(+421) 904 482 803</a>
+        <span><i>◎</i>Aarhus, Denmark</span>
+      </div>
+    </div>
+    <p class="label" data-i="cv_tag">Multimedia design & graphic design</p>
+    <p class="hi" aria-label="Nina Mondočková"><span class="w w1" aria-hidden="true"><b style="--i:0">N</b><b style="--i:1">i</b><b style="--i:2">n</b><b style="--i:3">a</b></span> <span class="w w2" aria-hidden="true"><b style="--i:4">M</b><b style="--i:5">o</b><b style="--i:6">n</b><b style="--i:7">d</b><b style="--i:8">o</b><b style="--i:9">č</b><b style="--i:10">k</b><b style="--i:11">o</b><b style="--i:12">v</b><b style="--i:13">á</b></span></p>
+    <p class="lead" data-i="ab_p1"></p>
+  </section>
+
+  <section id="work" class="wrap">
+    <div class="sec-head">
+      <h2 data-i="gr_h">Portfolio</h2>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section id="about" class="wrap cols">
+    <h2 data-i="lab2">About</h2>
+    <div>
+      <p data-i="ab_p2"></p>
+      <dl class="facts">
+        <dt data-i="ab_cur">Currently studying</dt><dd>Business Academy Aarhus - <span data-i="ab_cur2">Multimedia Design</span></dd>
+        <dt data-i="ab_prev">Previous education</dt><dd data-i="ab_prev2"></dd>
+        <dt data-i="sk_lang">Languages</dt><dd>Slovak, English</dd>
+        <dt data-i="lab5">Skills</dt><dd id="skills"></dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="wrap cols">
+    <h2 data-i="ex_h">Experience</h2>
+    <ul class="exp" id="expList"></ul>
+  </section>
+
+  <section id="contact" class="wrap cols">
+    <h2><span data-i="ct_h1">Get in</span> <span data-i="ct_h2">touch</span></h2>
+    <div class="contact">
+      <a class="mail" href="mailto:nina.mondockova@gmail.com">nina.mondockova@gmail.com</a>
+      <a href="tel:+421904482803">(+421) 904 482 803</a>
+      <span>Aarhus, Denmark</span>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>© Nina Mondočková</span>
+  <a href="#" data-i="to_top">Back to top ↑</a>
+</footer>
+
+<div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="m-bar">
+    <button id="mPrev">← <span id="mPrevT">Prev</span></button>
+    <span id="mNum"></span>
+    <button id="mNext"><span id="mNextT">Next</span> →</button>
+    <button id="mClose" class="m-close">✕ <span id="mCloseT">Close</span></button>
+  </div>
+  <div class="m-body">
+    <div class="m-info">
+      <p class="label" id="mCat"></p>
+      <h3 id="mTitle"></h3>
+      <p id="mDesc"></p>
+      <dl class="facts" id="mMeta"></dl>
+      <div class="m-links" id="mLinks"></div>
+    </div>
+    <div class="m-media">
+      <div class="m-tabs" id="mTabs"></div>
+      <div id="mStage"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="motion.js"></script>
+</body>
+</html>

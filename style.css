@@ -66,6 +66,14 @@ h2::first-letter{text-transform:uppercase}
 .strip i,.contact i{width:26px;height:26px;border-radius:50%;display:inline-grid;place-items:center;font-style:normal;font-size:12px;background:var(--ink);color:var(--bg);transition:background .2s}
 .strip a:hover i{background:var(--blue);color:#fff}
 .hi{font-size:clamp(40px,5.5vw,76px);font-weight:700;letter-spacing:-.04em;line-height:1;margin:16px 0 26px}
+/* Meno — dynamický nástup, vlna farby, hover poskok */
+.hi .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.22em .04em .14em;margin:-.22em -.04em -.14em}
+.hi .w b{display:inline-block;font-weight:inherit;cursor:default;transition:transform .45s cubic-bezier(.3,1.7,.5,1),color .2s}
+.hi .w b:hover{transform:translateY(-.14em) rotate(-6deg);color:var(--blue-l)}
+.hi .w2 b{animation:nameWave 5s ease-in-out infinite;animation-delay:calc(var(--i) * .09s + 2.2s)}
+@keyframes nameWave{0%,30%,100%{color:var(--ink)}12%{color:var(--blue-l)}}
+.js .hi .w b{translate:0 115%;rotate:10deg;transition:translate .9s var(--ease),rotate .9s var(--ease),transform .45s cubic-bezier(.3,1.7,.5,1),color .2s;transition-delay:calc(var(--i) * 45ms + .9s),calc(var(--i) * 45ms + .9s),0s,0s}
+.js .ready .hi .w b{translate:0 0;rotate:0deg}
 .lead{font-size:clamp(18px,1.8vw,22px);max-width:640px;color:#c9cad2}
 
 /* Sections */
@@ -132,6 +140,28 @@ section.wrap{padding-top:90px;padding-bottom:90px}
 #mStage img,#mStage video{width:100%;height:auto;background:var(--surface);border-radius:12px}
 #mStage .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
 #mStage .grid.wide{grid-template-columns:1fr}
+#mStage .grid.posters{grid-template-columns:repeat(5,1fr);align-items:start}
+@media (max-width:900px){#mStage .grid.posters{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){#mStage .grid.posters{grid-template-columns:repeat(2,1fr)}}
+#mStage .grid.cal{grid-template-columns:repeat(5,1fr);gap:12px}
+#mStage .grid.cal img:first-child{grid-column:span 2;grid-row:span 2}
+@media (max-width:560px){#mStage .grid.cal{grid-template-columns:repeat(2,1fr)}}
+#mStage.narrow{align-items:center}
+#mStage.narrow > img{width:78%}
+#mStage .m-extra{width:78%;margin:28px 0 0;padding-top:24px;border-top:1px solid var(--line);font-size:14px;letter-spacing:.08em;font-weight:600;color:var(--ink)}
+#mStage .grid.extra{width:78%;gap:12px}
+@media (max-width:560px){#mStage .m-extra,#mStage .grid.extra{width:100%}}
+@media (max-width:560px){#mStage.narrow > img{width:100%}}
+#mStage .grid.zoom img{cursor:zoom-in;transition:transform .3s var(--ease),opacity .3s}
+#mStage .grid.zoom img:hover{transform:scale(1.02)}
+.lb{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(8,8,10,.86);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);cursor:zoom-out}
+.lb.open{display:flex}
+.lb img{max-width:min(78vw,900px);max-height:82vh;width:auto;height:auto;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.5);cursor:default}
+.lb button{position:absolute;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:50%;width:48px;height:48px;font-size:24px;line-height:1;cursor:pointer}
+.lb button:hover{background:rgba(255,255,255,.18)}
+.lb-x{top:20px;right:20px;font-size:18px!important}
+.lb-p{left:20px;top:50%;margin-top:-24px}.lb-n{right:20px;top:50%;margin-top:-24px}
+@media (max-width:560px){.lb img{max-width:92vw}.lb-p,.lb-n{top:auto;bottom:20px;margin:0}}
 
 /* Small screens */
 @media (max-width:800px){
@@ -155,7 +185,7 @@ section.wrap{padding-top:90px;padding-bottom:90px}
   .m-body{padding:24px 16px 40px}
 }
 @media (max-width:480px){.tiles{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile img,.tile .img,.wm b{transition:none}.badge,.star{animation:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile img,.tile .img,.wm b{transition:none}.badge,.star,.hi .w2 b{animation:none}.js .hi .w b{translate:0 0;rotate:0deg;transition:none}}
 
 /* =========================================================
    Loading + pohyb (pokojný, plynulý)
@@ -201,25 +231,33 @@ section.wrap{padding-top:90px;padding-bottom:90px}
 .star{translate:calc(var(--mx,0) * 10px) calc(var(--my,0) * 10px)}
 .js .star{opacity:0;transition:opacity 1s ease .8s,translate .8s var(--ease) 0s}
 
-/* Bežiaci pás */
-.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:18px 0;margin-top:10px;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
-.marquee .track{display:flex;width:max-content;animation:marquee 45s linear infinite}
-.marquee span{white-space:nowrap;font-size:clamp(22px,2.6vw,34px);font-weight:600;letter-spacing:-.02em;color:var(--muted);padding-right:.4em}
-.marquee i{font-style:normal;color:var(--blue-l);margin:0 .35em;font-size:.7em;vertical-align:.15em}
-.marquee:hover .track{animation-play-state:paused}
-@keyframes marquee{to{transform:translateX(-50%)}}
 
 /* Objavovanie pri scrollovaní */
 .js .rv{opacity:0;translate:0 40px;transition:opacity .9s ease,translate .9s var(--ease);transition-delay:var(--d,0s)}
 .js .rv.in{opacity:1;translate:0 0}
 
-/* Dlaždice – plynulý nástup aj po zmene filtra */
-.js .tile{animation:tileIn .8s var(--ease) both;animation-play-state:paused}
-.js #tiles.in .tile{animation-play-state:running}
-.tile:nth-child(3n+2){animation-delay:.08s}
-.tile:nth-child(3n+3){animation-delay:.16s}
-@keyframes tileIn{from{opacity:0;transform:translateY(36px) scale(.98)}to{opacity:1;transform:none}}
+/* Dlaždice – dynamický nástup (každá zvlášť), 3D náklon, svetlo a kurzor za myšou */
+.js .tile{opacity:0;translate:0 60px;transition:opacity .8s ease var(--d,0s),translate 1.1s var(--ease) var(--d,0s)}
+.js .tile.in{opacity:1;translate:0 0}
+.js .tile .img{clip-path:inset(100% 0 0 0 round 16px);transition:clip-path 1.2s var(--ease) var(--d,0s),border-color .3s,box-shadow .4s,transform .5s var(--ease)}
+.js .tile.in .img{clip-path:inset(0 0 0 0 round 16px)}
+.js .tile img{scale:1.3;transition:scale 1.6s var(--ease) var(--d,0s),transform .7s var(--ease),filter .5s}
+.js .tile.in img{scale:1}
+.tile .img{transform:perspective(900px) rotateX(calc(var(--ry,0) * 1deg)) rotateY(calc(var(--rx,0) * 1deg)) translateY(var(--ty,0px))}
+.tile:hover .img{--ty:-8px}
+.tile:hover img{transform:scale(1.08);filter:brightness(1.06) saturate(1.1)}
+.tile .img::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0;transition:opacity .4s;
+  background:radial-gradient(380px circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.18),rgba(91,123,255,.12) 35%,transparent 65%)}
+.tile:hover .img::before{opacity:1}
+.tile .view{position:absolute;left:var(--gx,50%);top:var(--gy,50%);z-index:2;width:78px;height:78px;margin:-39px 0 0 -39px;border-radius:50%;
+  background:var(--blue);color:#fff;display:grid;place-items:center;font-size:28px;font-weight:500;box-shadow:0 10px 30px var(--blue-glow);
+  pointer-events:none;scale:0;rotate:-45deg;transition:scale .45s cubic-bezier(.3,1.6,.5,1),rotate .45s var(--ease)}
+.tile:hover .view{scale:1;rotate:0deg}
+.tile .t-meta b{background:linear-gradient(var(--blue-l),var(--blue-l)) 0 100%/0 2px no-repeat;transition:background-size .45s var(--ease),color .2s;padding-bottom:2px}
+.tile:hover .t-meta b{background-size:100% 2px}
+.tile .t-yr{transition:transform .4s var(--ease),color .2s}
+.tile:hover .t-yr{transform:translateX(-4px);color:var(--ink)}
+@media (hover:none){.tile .view{display:none}}
 .filters button{transition:background .3s,border-color .3s,color .3s}
 
 /* Header pri scrollovaní */
@@ -234,7 +272,9 @@ section.wrap{padding-top:90px;padding-bottom:90px}
   .js .loader{display:none}
   .is-loading body{overflow:auto}
   .js .wm b,.js .badge,.js .years,.js .star,.js .strip,.js .intro > *,.js .rv{opacity:1!important;translate:0 0!important;transition:none!important}
-  .marquee .track,.js .tile,.modal.open{animation:none}
+  .modal.open{animation:none}
+  .js .tile,.js .tile .img,.js .tile img{opacity:1!important;translate:0 0!important;scale:1!important;clip-path:none!important;transition:none!important}
+  .tile .img{transform:none!important}
   .wm .l1,.wm .l2{transform:none}
 }
 
@@ -247,3 +287,193 @@ section.wrap{padding-top:90px;padding-bottom:90px}
 .t-meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:12px}
 .t-meta b{margin-top:0!important}
 .t-yr{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ================================================================
+   REDIZAJN – zložky so záložkami (tvoje farby: tmavá, modrá, svetlomodrá, biela)
+   ================================================================ */
+:root{--paper:#f4f4f6;--dark:#0b0b0e}
+
+/* Hero */
+.hx{position:relative;text-align:center;padding-top:clamp(80px,13vw,170px);padding-bottom:clamp(70px,10vw,140px)}
+.hx-top{font-weight:800;font-size:clamp(30px,5.4vw,82px);letter-spacing:-.055em;line-height:1;color:var(--ink)}
+.hx-wm{display:flex;justify-content:center;align-items:center;font-weight:800;font-size:clamp(68px,15.5vw,240px);letter-spacing:-.06em;line-height:.88;color:var(--blue-l);margin-top:.04em;text-transform:uppercase}
+.hx-wm b{display:inline-block;font-weight:inherit;transition:transform .45s cubic-bezier(.3,1.7,.5,1),color .2s;cursor:default}
+.hx-wm b:hover{transform:translateY(-.08em) rotate(-4deg);color:var(--ink)}
+.hx-wm .cur{width:.56em;height:.7em;margin:0 -.07em 0 .03em;transform-origin:30% 30%}
+.hx-wm .cur svg{width:100%;height:100%;fill:var(--ink);filter:drop-shadow(0 10px 30px var(--blue-glow))}
+.hx-wm .cur{animation:curTap 3.2s ease-in-out infinite 2.6s}
+@keyframes curTap{0%,70%,100%{transform:none}78%{transform:translate(-.03em,-.03em) scale(.9)}86%{transform:none}}
+.hx-pill{display:inline-flex;align-items:center;gap:.55em;margin-top:clamp(24px,3vw,40px);padding:10px 20px;border:1px solid rgba(255,255,255,.3);border-radius:12px;background:rgba(255,255,255,.04);font-size:clamp(15px,1.5vw,21px);color:var(--ink)}
+.hx-pill span{color:var(--blue-l)}
+.hx .star{position:absolute}
+.hx .s1{left:6%;top:16%;font-size:clamp(40px,5vw,80px)}
+.hx .s2{right:13%;bottom:22%;top:auto;left:auto;font-size:clamp(30px,4vw,64px)}
+/* nástup hero */
+.js .hx > .hx-top,.js .hx > .hx-pill{opacity:0;translate:0 24px;transition:opacity .9s ease,translate .9s var(--ease)}
+.js .hx.ready > .hx-top{opacity:1;translate:0 0;transition-delay:.05s}
+.js .hx.ready > .hx-pill{opacity:1;translate:0 0;transition-delay:.9s}
+.js .hx-wm b{opacity:0;translate:0 .35em;transition:translate 1s var(--ease),opacity .8s ease,transform .45s cubic-bezier(.3,1.7,.5,1),color .2s;transition-delay:calc(var(--i) * 60ms + .15s),calc(var(--i) * 60ms + .15s),0s,0s}
+.js .hx.ready .hx-wm b{opacity:1;translate:0 0}
+
+/* Zložka */
+section.fold{position:relative;padding-top:clamp(30px,4vw,50px);padding-bottom:0;margin-bottom:clamp(50px,6vw,90px)}
+.fold-tabs{position:relative;z-index:2;display:flex;align-items:flex-end;padding:0 clamp(14px,4vw,64px)}
+.ftab{display:inline-block;padding:14px clamp(20px,3.2vw,52px) 15px;border-radius:16px 16px 0 0;font-weight:800;font-size:clamp(16px,2vw,28px);letter-spacing:-.045em;line-height:1.1;text-transform:lowercase;white-space:nowrap;margin-right:-4px}
+.ftab.c0{background:var(--paper);color:var(--dark);padding-top:18px}
+.ftab.c1{background:var(--blue);color:#fff}
+.ftab.c2{background:var(--blue-l);color:var(--dark)}
+.ftab.far{margin-left:auto;margin-right:0}
+.fold-body{position:relative;z-index:1;border-radius:24px;background:var(--paper);color:var(--dark)}
+/* vrstvené okraje za kartou (ako stohované zložky) */
+.fold-layered .fold-body{box-shadow:0 -14px 0 0 var(--blue),0 -28px 0 0 var(--blue-l)}
+.fold-layered .ftab.c1{margin-bottom:14px}
+.fold-layered .ftab.c2{margin-bottom:28px}
+
+/* About */
+.ab{display:grid;grid-template-columns:minmax(220px,300px) 1fr 1fr;grid-template-areas:"photo hi hi" "photo edu exp" "con skills soft";gap:clamp(28px,4vw,48px) clamp(28px,4vw,56px);padding:clamp(32px,5vw,70px)}
+.ab h3{font-weight:800;font-size:clamp(24px,2.4vw,32px);letter-spacing:-.05em;line-height:1;text-transform:lowercase;margin-bottom:16px}
+.ab-photo{grid-area:photo;position:relative;align-self:start}
+.ab-photo img{width:100%;height:auto;filter:drop-shadow(4px 0 0 var(--blue-l)) drop-shadow(-4px 0 0 var(--blue-l)) drop-shadow(0 4px 0 var(--blue-l)) drop-shadow(0 -4px 0 var(--blue-l))}
+.ab-photo img + .ab-mono{display:none}
+.ab-mono{display:grid;place-items:center;aspect-ratio:3/4;background:var(--blue);color:#fff;font-weight:800;font-size:clamp(64px,8vw,120px);letter-spacing:-.06em;border-radius:46% 54% 42% 58% / 38% 40% 60% 62%;border:6px solid var(--blue-l);rotate:-4deg;transition:rotate .6s cubic-bezier(.3,1.6,.5,1),border-radius .8s var(--ease)}
+.ab-photo:hover .ab-mono{rotate:3deg;border-radius:56% 44% 58% 42% / 48% 56% 44% 52%}
+.ab-hi{grid-area:hi;max-width:560px}
+.ab-hi h3{font-size:clamp(20px,1.8vw,24px);letter-spacing:-.03em;text-transform:none;line-height:1.15;margin-bottom:12px}
+.ab-hi p{font-size:15px;line-height:1.5;color:#333;margin-bottom:8px}
+.ab-edu{grid-area:edu}.ab-exp{grid-area:exp}.ab-con{grid-area:con}.ab-skills{grid-area:skills}.ab-soft{grid-area:soft}
+.ab-list{list-style:none;display:flex;flex-direction:column;gap:16px}
+.ab-list li{font-size:14px;line-height:1.35}
+.ab-list b{display:block;font-weight:700}
+.ab-list strong{display:block;font-weight:700;color:var(--blue)}
+.ab-list span{display:block;color:#555}
+.ab-list button{margin-top:4px;font-size:13px;font-weight:700;color:var(--blue);border-bottom:1.5px solid currentColor;transition:color .2s}
+.ab-list button:hover{color:var(--dark)}
+.ab-small .lc{text-transform:lowercase}
+.ab-small{font-size:14px;line-height:1.55;color:#333}
+.ab-small a{color:#333}.ab-small a:hover{color:var(--blue)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips span{padding:4px 12px;border:1.5px solid var(--dark);border-radius:99px;font-size:13px;line-height:1.3;transition:background .25s,color .25s,transform .3s cubic-bezier(.3,1.6,.5,1)}
+.chips span:hover{background:var(--blue);border-color:var(--blue);color:#fff;transform:translateY(-3px) rotate(-3deg)}
+.sw{display:flex;flex-wrap:wrap;gap:8px}
+.sw i{display:grid;place-items:center;width:46px;height:46px;border-radius:10px;background:var(--dark);color:#fff;font-style:normal;font-weight:700;font-size:16px;letter-spacing:-.02em;box-shadow:inset 0 0 0 2px rgba(255,255,255,.12);transition:background .25s,transform .35s cubic-bezier(.3,1.6,.5,1)}
+.sw i:hover{background:var(--blue);transform:translateY(-4px) rotate(6deg)}
+
+/* Práce – záložky sú filtre */
+.fold-work .fold-tabs{gap:0}
+.fold-work .ftab{border:0;cursor:pointer;background:var(--surface);color:var(--muted);transition:background .3s,color .3s,padding .3s var(--ease)}
+.fold-work .ftab:nth-child(2n){background:var(--paper);color:var(--dark)}
+.fold-work .ftab:nth-child(3n){background:var(--blue-l);color:var(--dark)}
+.fold-work .ftab:hover{padding-bottom:22px}
+.fold-work .ftab.on{background:var(--blue);color:#fff;padding-top:20px;padding-bottom:18px}
+.fold-work .fold-body{background:var(--blue);color:#fff}
+.ftabs-scroll{overflow-x:auto;scrollbar-width:none}
+.ftabs-scroll::-webkit-scrollbar{display:none}
+.wk{padding:clamp(28px,4.5vw,60px)}
+.wk-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:clamp(28px,4vw,48px)}
+.wk-head h2{font-weight:800;font-size:clamp(40px,6vw,88px);letter-spacing:-.06em;text-transform:lowercase;line-height:.9}
+.wk-head h2::first-letter{text-transform:lowercase}
+.wk-head p{max-width:420px;font-size:15px;line-height:1.5;color:rgba(255,255,255,.82)}
+.wk .tile .img{border-color:rgba(255,255,255,.18);background:rgba(0,0,0,.18)}
+.wk .tile:hover .img{border-color:#fff;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.wk .tile small,.wk .t-yr{color:rgba(255,255,255,.7)}
+.wk .tile:hover b{color:#fff}
+.wk .tile .t-meta b{background-image:linear-gradient(#fff,#fff)}
+.wk .tile:hover .t-yr{color:#fff}
+.wk .tile .view{background:#fff;color:var(--blue);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.wk .tile:hover .img::after{background:var(--dark)}
+
+/* Kontakt */
+.ct{padding:clamp(36px,6vw,80px);display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.ct h2{font-weight:800;font-size:clamp(48px,8vw,120px);letter-spacing:-.06em;line-height:.88;text-transform:lowercase}
+.ct h2::first-letter{text-transform:lowercase}
+.ct h2 span:last-child{color:var(--blue)}
+.ct-links{display:flex;flex-direction:column;gap:8px;align-items:flex-start;font-size:15px;color:#333}
+.ct-links a{color:#333}
+.ct-links .ct-mail{font-weight:800;font-size:clamp(20px,2.4vw,32px);letter-spacing:-.04em;color:var(--blue)}
+.ct-links a:hover{color:var(--dark)}
+
+@media (max-width:900px){
+  .ab{grid-template-columns:1fr 1fr;grid-template-areas:"photo hi" "edu exp" "con con" "skills skills" "soft soft"}
+  .wk-head{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:600px){
+  .ab{grid-template-columns:1fr;grid-template-areas:"photo" "hi" "edu" "exp" "con" "skills" "soft";padding:28px 22px}
+  .ab-photo{max-width:220px}
+  .fold-tabs{padding:0 10px}
+  .ftab{padding:11px 16px 12px;font-size:15px;border-radius:12px 12px 0 0}
+  .ftab.c0{padding-top:14px}
+  .fold-layered .fold-body{box-shadow:0 -10px 0 0 var(--blue),0 -20px 0 0 var(--blue-l)}
+  .fold-layered .ftab.c1{margin-bottom:10px}.fold-layered .ftab.c2{margin-bottom:20px}
+  .fold-body{border-radius:18px}
+  .hx .s1,.hx .s2{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .hx > *,.js .hx-wm b{opacity:1!important;translate:0 0!important;transition:none!important}
+  .hx-wm .cur{animation:none}
+}
+
+/* ================================================================
+   PREHODENÉ FARBY – modré pozadie, tmavé akcenty
+   ================================================================ */
+html{background:var(--blue)}
+body{background:
+    linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px) 0 0/56px 56px,
+    linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px) 0 0/56px 56px,
+    radial-gradient(900px 600px at 85% -10%,rgba(91,123,255,.55),transparent 70%),
+    radial-gradient(800px 600px at 0% 100%,rgba(11,11,14,.25),transparent 70%),
+    var(--blue);background-attachment:fixed}
+::selection{background:var(--dark);color:#fff}
+.top{background:rgba(33,71,230,.82);border-bottom-color:rgba(255,255,255,.18)}
+.top nav a,.lang button{color:rgba(255,255,255,.75)}
+.top nav a:hover,.lang button:hover{color:#fff}
+.lang button.on{background:var(--dark);color:#fff}
+/* hero */
+.hx-wm{color:var(--dark)}
+.hx-wm b:hover{color:#fff}
+.hx-wm .cur svg{fill:#fff;filter:drop-shadow(0 10px 30px rgba(11,11,14,.35))}
+.hx-pill{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.08)}
+.hx-pill span{color:var(--dark)}
+.hx .star{--c:#fff}
+/* zložky */
+.ftab.c1{background:var(--dark);color:#fff}
+.fold-layered .fold-body{box-shadow:0 -14px 0 0 var(--dark),0 -28px 0 0 var(--blue-l)}
+.fold-work .ftab{background:#16171c;color:rgba(255,255,255,.65)}
+.fold-work .ftab:nth-child(2n){background:var(--paper);color:var(--dark)}
+.fold-work .ftab:nth-child(3n){background:var(--blue-l);color:var(--dark)}
+.fold-work .ftab.on{background:var(--dark);color:#fff}
+.fold-work .fold-body{background:var(--dark)}
+.wk .tile .img{border-color:rgba(255,255,255,.12)}
+.wk .tile:hover .img{border-color:var(--blue-l);box-shadow:0 18px 40px var(--blue-glow)}
+.wk .tile .view{background:var(--blue);color:#fff}
+.wk .tile:hover .img::after{background:var(--blue)}
+.wk .tile .t-meta b{background-image:linear-gradient(var(--blue-l),var(--blue-l))}
+.ab-mono{background:var(--dark);border-color:var(--blue-l)}
+/* päta */
+.foot{border-top-color:rgba(255,255,255,.2);color:rgba(255,255,255,.8)}
+.foot a{color:rgba(255,255,255,.8)}
+.foot a:hover{color:#fff}
+@media (max-width:600px){.fold-layered .fold-body{box-shadow:0 -10px 0 0 var(--dark),0 -20px 0 0 var(--blue-l)}}
+
+/* Logo NMD */
+.logo{display:inline-flex;align-items:center;gap:12px}
+.logo img{height:34px;width:auto;transition:transform .45s cubic-bezier(.3,1.7,.5,1)}
+.logo:hover img{transform:rotate(-8deg) scale(1.08)}
+.ab-mono img{width:62%;height:auto;filter:none;transition:transform .6s cubic-bezier(.3,1.6,.5,1)}
+.ab-photo:hover .ab-mono img{transform:rotate(6deg) scale(1.06)}
+.ld-logo{display:inline-flex;align-items:center;gap:10px}
+.ld-logo img{height:26px;width:auto}
+@media (max-width:600px){.logo img{height:28px}}
+
+/* About – len logo, bez tvaru */
+.ab-mono{background:none!important;border:0!important;border-radius:0!important;rotate:0deg!important;aspect-ratio:auto;padding:10px 0}
+.ab-mono img{width:100%;max-width:280px}
+.ab-photo:hover .ab-mono img{transform:rotate(-6deg) scale(1.05)}
+
+/* R späť v PORTFOLIO, kurzor naň „kliká“ */
+.hx-wm .r{position:relative}
+.hx-wm .r .cur{position:absolute;left:52%;top:22%;width:.3em;height:.34em;margin:0;pointer-events:none;animation:curTap 3.2s ease-in-out infinite 2.6s}
+.hx-wm .r .cur svg{width:100%;height:100%;fill:#fff;filter:drop-shadow(0 8px 20px rgba(11,11,14,.35))}
+
+/* About logo nižšie */
+.ab-photo{margin-top:clamp(30px,5vw,70px)}
+@media (max-width:600px){.ab-photo{margin-top:10px}}
