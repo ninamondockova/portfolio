@@ -27,7 +27,7 @@ var I = {
     lv_adv: 'Advanced', lv_mid: 'Intermediate', lv_basic: 'Basic',
     m_close: 'CLOSE', m_prev: 'PREV', m_next: 'NEXT', m_pdf: 'VIEW PDF', m_back: 'BACK TO IMAGES', m_open: 'OPEN PDF ↗', m_flyer: 'DL FLYER PDF ↗', m_doc: 'DOCUMENTATION PDF ↗',
     m_year: 'YEAR', m_scope: 'SCOPE', m_role: 'ROLE',
-    t_banners: 'ONLINE BANNERS', t_ppc: 'PPC ADS', t_some: 'SOCIAL MEDIA', t_app: 'APP BANNERS', t_ad: 'VIDEO AD', t_story: 'STORYBOARD', t_video: 'ANIMATION', t_event: 'EVENT – POSTER & INVITATION'
+    t_banners: 'ONLINE BANNERS', t_ppc: 'PPC ADS', t_some: 'SOCIAL MEDIA', t_app: 'APP BANNERS', cv_dl: 'Download CV', t_ad: 'VIDEO AD', t_story: 'STORYBOARD', t_video: 'ANIMATION', t_event: 'EVENT – POSTER & INVITATION'
   },
   sk: {
     lab1: 'PORTFÓLIO', lab2: 'O MNE', lab3: 'VYBRANÉ PROJEKTY', lab4: 'VŠETKY PRÁCE', lab5: 'ZRUČNOSTI', lab6: 'SKÚSENOSTI', lab7: 'POĎME TVORIŤ SPOLU', lab8: 'ĎAKUJEM',
@@ -46,7 +46,7 @@ var I = {
     lv_adv: 'Pokročilé', lv_mid: 'Stredne pokročilé', lv_basic: 'Základy',
     m_close: 'ZAVRIEŤ', m_prev: 'SPÄŤ', m_next: 'ĎALEJ', m_pdf: 'ZOBRAZIŤ PDF', m_back: 'SPÄŤ NA OBRÁZKY', m_open: 'OTVORIŤ PDF ↗', m_flyer: 'DL LETÁK PDF ↗', m_doc: 'DOKUMENTÁCIA PDF ↗',
     m_year: 'ROK', m_scope: 'ROZSAH', m_role: 'ROLA',
-    t_banners: 'ONLINE BANNERY', t_ppc: 'PPC REKLAMY', t_some: 'SOCIÁLNE SIETE', t_app: 'APP BANNERY', t_ad: 'VIDEO REKLAMA', t_story: 'STORYBOARD', t_video: 'ANIMÁCIA', t_event: 'EVENT – PLAGÁT & POZVÁNKA'
+    t_banners: 'ONLINE BANNERY', t_ppc: 'PPC REKLAMY', t_some: 'SOCIÁLNE SIETE', t_app: 'APP BANNERY', cv_dl: 'Stiahnuť CV', t_ad: 'VIDEO REKLAMA', t_story: 'STORYBOARD', t_video: 'ANIMÁCIA', t_event: 'EVENT – PLAGÁT & POZVÁNKA'
   },
   dk: {
     lab1: 'PORTEFØLJE', lab2: 'OM MIG', lab3: 'UDVALGTE PROJEKTER', lab4: 'ALT ARBEJDE', lab5: 'FÆRDIGHEDER', lab6: 'ERFARING', lab7: 'LAD OS ARBEJDE SAMMEN', lab8: 'TAK',
@@ -65,7 +65,7 @@ var I = {
     lv_adv: 'Avanceret', lv_mid: 'Mellemniveau', lv_basic: 'Grundlæggende',
     m_close: 'LUK', m_prev: 'FORRIGE', m_next: 'NÆSTE', m_pdf: 'SE PDF', m_back: 'TILBAGE TIL BILLEDER', m_open: 'ÅBN PDF ↗', m_flyer: 'DL BROCHURE PDF ↗', m_doc: 'DOKUMENTATION PDF ↗',
     m_year: 'ÅR', m_scope: 'OMFANG', m_role: 'ROLLE',
-    t_banners: 'ONLINE BANNERE', t_ppc: 'PPC ANNONCER', t_some: 'SOCIALE MEDIER', t_app: 'APP BANNERE', t_ad: 'VIDEOREKLAME', t_story: 'STORYBOARD', t_video: 'ANIMATION', t_event: 'EVENT – PLAKAT & INVITATION'
+    t_banners: 'ONLINE BANNERE', t_ppc: 'PPC ANNONCER', t_some: 'SOCIALE MEDIER', t_app: 'APP BANNERE', cv_dl: 'Download CV', t_ad: 'VIDEOREKLAME', t_story: 'STORYBOARD', t_video: 'ANIMATION', t_event: 'EVENT – PLAKAT & INVITATION'
   }
 };
 function t(k) { return (I[LANG] && I[LANG][k]) || I.en[k] || k; }
@@ -102,6 +102,9 @@ var P = [
   { id: 'lauma', cat: 'brand', catL: L('BRANDING & PACKAGING / ERASMUS+', 'BRANDING & OBALY / ERASMUS+', 'BRANDING & EMBALLAGE / ERASMUS+'), title: 'Lauma Skincare',
     desc: L('An Erasmus+ project I created in Latvia: brand manual and packaging for Lauma Skincare, a Latvian line of sheet masks. Each box is inspired by a goddess from Latvian mythology (Lauma, Jūras Māte, Saule) with its own colour palette, illustration and line icons.', 'Erasmus+ projekt, ktorý som robila v Lotyšsku: dizajn manuál a obaly pre Lauma Skincare, lotyšskú značku pleťových masiek. Každá krabička je inšpirovaná bohyňou z lotyšskej mytológie (Lauma, Jūras Māte, Saule) a má vlastnú farebnú paletu, ilustráciu a ikony.', 'Et Erasmus+ projekt, jeg lavede i Letland: designmanual og emballage til Lauma Skincare, en lettisk serie af ansigtsmasker. Hver æske er inspireret af en gudinde fra lettisk mytologi (Lauma, Jūras Māte, Saule) med egen farvepalet, illustration og ikoner.'),
     meta: [['m_year', '2024'], ['m_scope', 'Erasmus+ Riga, Packaging, Brand Manual']], thumb: 'image/_thumbs/lauma-0001.jpg', imgs: ['image/lauma/0001.jpg', 'image/lauma/0002.jpg', 'image/lauma/0003.jpg', 'image/lauma/0004.jpg', 'image/lauma/0005.jpg', 'image/lauma/0006.jpg', 'image/lauma/0007.jpg', 'image/lauma/0008.jpg', 'image/lauma/0009.jpg', 'image/lauma/0010.jpg'], pdf: 'image/lauma.pdf', tags: ['ERASMUS+', 'PACKAGING', 'BRAND MANUAL'] },
+  { id: 'gaudifest', cat: 'ui', catL: L('FESTIVAL APP, UI/UX DESIGN', 'FESTIVALOVÁ APLIKÁCIA, UI/UX DESIGN', 'FESTIVALAPP, UI/UX DESIGN'), title: 'GaudiFest',
+    desc: L('Logo and mobile app for GaudiFest, a festival celebrating 100 years of Antoni Gaudí in Barcelona: map, programme, daily challenges and prizes, tickets and packages, discounts and a digital ticket. Warm colours and illustrations inspired by Gaudí\'s architecture.', 'Logo a mobilná aplikácia pre GaudiFest, festival k 100 rokom od Antoniho Gaudího v Barcelone: mapa, program, denné výzvy a ceny, vstupenky a balíčky, zľavy a digitálna vstupenka. Teplé farby a ilustrácie inšpirované Gaudího architektúrou.', 'Logo og mobilapp til GaudiFest, en festival for 100 år med Antoni Gaudí i Barcelona: kort, program, daglige udfordringer og præmier, billetter og pakker, rabatter og en digital billet. Varme farver og illustrationer inspireret af Gaudís arkitektur.'),
+    meta: [['m_scope', 'Logo, Mobile App, UI/UX']], thumb: 'image/_thumbs/gaudifest-0001.jpg', imgs: ['image/gaudifest/0001.jpg', 'image/gaudifest/0002.jpg', 'image/gaudifest/0003.jpg'], pdf: 'image/gaudifest.pdf', tags: ['LOGO', 'MOBILE APP', 'UI/UX'] },
   { id: 'nutrivictus', cat: 'print', catL: L('CATALOG / EDITORIAL', 'KATALÓG & EDITORIÁL', 'KATALOG / EDITORIELT'), title: 'Nutrivictus',
     desc: L('Complete product catalog: typography rules, clean multi-column layouts, category color coding and print-ready preparation. 10 pages.', 'Kompletný produktový katalóg: typografia, prehľadná mriežka, farebné kódovanie kategórií a príprava na tlač. 10 strán.', 'Komplet produktkatalog: typografi, rene layouts, farvekodning af kategorier og klargøring til tryk. 10 sider.'),
     meta: [['m_year', '2025'], ['m_scope', 'Catalog, Print Layout']], thumb: 'image/_thumbs/nutrivictus-logo.jpg', imgs: ['image/katalog_mondockova_interactive/0001.jpg', 'image/katalog_mondockova_interactive/0002.jpg', 'image/katalog_mondockova_interactive/0003.jpg', 'image/katalog_mondockova_interactive/0004.jpg', 'image/katalog_mondockova_interactive/0005.jpg', 'image/katalog_mondockova_interactive/0006.jpg', 'image/katalog_mondockova_interactive/0007.jpg'], narrow: true, extra: { k: 't_event', files: ['image/nutrivictus-event/plagat.jpg', 'image/nutrivictus-event/pozvanka.jpg'], cols: '.7075fr .476fr' }, pdf: 'image/katalog_mondockova_interactive.pdf', tags: ['CATALOG', 'PRINT'] },
@@ -138,7 +141,7 @@ var P = [
     meta: [['m_year', '2025'], ['m_scope', 'Mobile Game, UI/UX']], thumb: 'image/_thumbs/mystical-0001.jpg', imgs: ['image/mystical/0001.jpg', 'image/mystical/0002.jpg', 'image/mystical/0003.jpg', 'image/mystical/0004.jpg', 'image/mystical/0005.jpg'], pdf: 'image/mystical.pdf', tags: ['MOBILE GAME', 'UI/UX'] }
 
 ];
-var SOON = ['Gaudifest'];
+var SOON = [];
 var FEATURED = ['fruitiq', 'smiechko', 'catchles', 'mrazima', 'salvik'];
 var byId = function (id) { return P.filter(function (p) { return p.id === id; })[0]; };
 var SKILLS = [['Illustrator', 'lv_adv', 1], ['Photoshop', 'lv_adv', 1], ['InDesign', 'lv_adv', 1], ['After Effects', 'lv_mid', .6], ['Figma', 'lv_mid', .6], ['HTML / CSS', 'lv_adv', 1], ['JavaScript', 'lv_basic', .35], ['WordPress', 'lv_basic', .35], ['Blender', 'lv_basic', .2]];

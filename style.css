@@ -662,3 +662,10 @@ html.dark .cf button{background:#2a2b33}
 /* vertikálne video v detaile projektu */
 #mStage .m-video{display:flex;justify-content:center;padding:clamp(16px,3vw,32px);border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
 #mStage .m-video video{width:auto;max-width:100%;max-height:78vh;border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+
+/* stiahnutie CV */
+.cv-dl{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:14px;font-size:13px;font-weight:700;letter-spacing:.02em}
+.cv-dl span{margin-right:4px}
+.cv-dl a{padding:7px 14px;border-radius:99px;background:var(--dark);color:#fff!important;font-weight:700;transition:background .25s,transform .4s cubic-bezier(.3,1.7,.5,1)}
+.cv-dl a:hover{background:var(--blue-l);color:var(--dark)!important;transform:translateY(-2px) rotate(-3deg)}
+html.dark .cv-dl a{background:#2a2b33}
