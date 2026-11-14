@@ -617,3 +617,48 @@ html.dark .cf button{background:#2a2b33}
 .foot .credits{font-size:13px;opacity:.85;text-align:right;max-width:70ch}
 @media (max-width:600px){.foot .credits{text-align:left}}
 .foot{gap:20px;flex-wrap:wrap;align-items:flex-start}
+
+/* dve práce vedľa seba (abecedy) */
+#mStage .grid.pair{grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media (max-width:560px){#mStage .grid.pair{grid-template-columns:1fr}}
+
+/* ================================================================
+   NOVÝ LAYOUT DETAILU PROJEKTU – veľký nadpis hore, text v dvoch
+   stĺpcoch, obrázky na celú šírku pod ním
+   ================================================================ */
+.m-body{display:block;max-width:1320px;padding:clamp(36px,6vw,80px) clamp(18px,4vw,56px) 80px}
+.m-info{position:static;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);column-gap:clamp(28px,6vw,96px);row-gap:18px;
+  align-items:start;padding-bottom:clamp(28px,4vw,48px);margin-bottom:clamp(28px,4vw,48px);border-bottom:1px solid var(--line)}
+.m-info .label{grid-column:1 / -1;display:inline-flex;align-items:center;gap:10px;color:var(--blue-l);font-weight:600}
+.m-info h3{grid-column:1 / -1;font-size:clamp(52px,9vw,140px);font-weight:800;letter-spacing:-.06em;line-height:.9;margin-bottom:clamp(10px,2vw,26px)}
+.m-info #mDesc{grid-column:1;grid-row:3 / span 2;font-size:clamp(17px,1.5vw,21px);line-height:1.55;color:#d6d7de;max-width:62ch}
+.m-info .facts{grid-column:2;grid-row:3;margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 22px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.03)}
+.m-info .facts dt{font-size:12px;letter-spacing:.12em;color:var(--muted);align-self:center}
+.m-info .facts dd{font-size:15px;font-weight:600;color:var(--ink)}
+.m-info .m-links{grid-column:2;grid-row:4;margin:0}
+.m-links a{border-color:var(--blue-l);font-weight:600}
+.m-links a:hover{background:var(--blue-l);border-color:var(--blue-l);color:var(--dark)}
+.m-media{gap:24px}
+#mStage{gap:28px}
+#mStage > img{border-radius:16px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+@media (max-width:900px){
+  .m-info{grid-template-columns:1fr}
+  .m-info #mDesc,.m-info .facts,.m-info .m-links{grid-column:1;grid-row:auto}
+}
+#mStage .grid.trio{grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
+@media (max-width:560px){#mStage .grid.trio{grid-template-columns:1fr}}
+
+/* detail projektu – menší a s písmom Pacifico */
+.m-body{max-width:1080px;padding:clamp(28px,4.5vw,60px) clamp(18px,4vw,48px) 70px}
+.m-info{row-gap:14px;column-gap:clamp(24px,5vw,72px);padding-bottom:clamp(22px,3vw,36px);margin-bottom:clamp(22px,3vw,36px)}
+.m-info h3{font-size:clamp(38px,5.6vw,84px);margin-bottom:clamp(6px,1.4vw,16px)}
+.m-info #mDesc{font-size:clamp(15px,1.2vw,17px);line-height:1.6}
+.m-info .facts{padding:14px 16px;gap:8px 18px}
+.m-info .facts dd{font-size:14px}
+.m-links a{font-size:13px;padding:7px 14px}
+#mStage{gap:20px}
+#mStage > img{border-radius:12px}
+
+/* vertikálne video v detaile projektu */
+#mStage .m-video{display:flex;justify-content:center;padding:clamp(16px,3vw,32px);border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+#mStage .m-video video{width:auto;max-width:100%;max-height:78vh;border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
