@@ -17,7 +17,7 @@
   .card::before,.card::after{content:'';position:absolute;top:-14px;width:30px;height:30px;border-radius:50%;background:var(--pink);box-shadow:inset -4px -4px 0 rgba(0,0,0,.15),2px 4px 6px rgba(0,0,0,.3)}
   .card::before{left:28px}.card::after{right:28px;top:auto;bottom:-14px;opacity:0}
   .num{font-weight:800;font-size:clamp(110px,22vw,200px);letter-spacing:-.07em;line-height:.85;color:var(--blue)}
-  .num span{display:inline-block;color:var(--pink);animation:wob 2.4s ease-in-out infinite}
+  .num span{display:inline-block;color:var(--blue);animation:wob 2.4s ease-in-out infinite}
   h1{font-weight:800;font-size:clamp(24px,4vw,36px);letter-spacing:-.04em;margin:18px 0 8px}
   p{font-size:16px;color:#444;line-height:1.5}
   .note{font-family:'Caveat',cursive;font-size:24px;color:var(--blue);margin-top:14px;rotate:-3deg}
@@ -35,7 +35,6 @@
     <div class="num">4<span>0</span>4</div>
     <h1 id="h">This page got lost in the folders.</h1>
     <p id="p">The page you are looking for doesn't exist or has been moved.</p>
-    <p class="note" id="n">maybe it fell behind the desk…</p>
     <a class="home" id="a" href="/portfolio/">← BACK TO PORTFOLIO</a>
   </main>
 <script>
@@ -44,7 +43,7 @@
     sk: ['Táto stránka sa stratila medzi šanónmi.', 'Stránka, ktorú hľadáš, neexistuje alebo bola presunutá.', 'možno spadla za stôl…', '← SPÄŤ NA PORTFÓLIO'],
     da: ['Denne side er blevet væk i mapperne.', 'Siden, du leder efter, findes ikke eller er blevet flyttet.', 'måske faldt den bag skrivebordet…', '← TILBAGE TIL PORTEFØLJEN']
   }[l === 'cs' ? 'sk' : l];
-  if (T) { h.textContent = T[0]; p.textContent = T[1]; n.textContent = T[2]; a.textContent = T[3]; document.documentElement.lang = l; }
+  if (T) { h.textContent = T[0]; p.textContent = T[1]; a.textContent = T[3]; document.documentElement.lang = l; }
   if (location.protocol === 'file:') a.href = 'index.html';
 </script>
 </body>
