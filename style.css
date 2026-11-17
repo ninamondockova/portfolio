@@ -669,3 +669,16 @@ html.dark .cf button{background:#2a2b33}
 .cv-dl a{padding:7px 14px;border-radius:99px;background:var(--dark);color:#fff!important;font-weight:700;transition:background .25s,transform .4s cubic-bezier(.3,1.7,.5,1)}
 .cv-dl a:hover{background:var(--blue-l);color:var(--dark)!important;transform:translateY(-2px) rotate(-3deg)}
 html.dark .cv-dl a{background:#2a2b33}
+
+/* prehrávanie vizualizácií pri prejdení myšou */
+.tile .img .hv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;scale:1!important;transition:opacity .45s ease;pointer-events:none;z-index:1}
+.tile .img .hv.on{opacity:1}
+
+/* bez loga NMD v sekcii About */
+.ab{grid-template-columns:repeat(6,1fr);grid-template-areas:"hi hi hi hi hi hi" "edu edu edu exp exp exp" "con con skills skills soft soft"}
+@media (max-width:1000px){.ab{grid-template-columns:1fr 1fr;grid-template-areas:"hi hi" "edu exp" "con con" "skills skills" "soft soft"}}
+@media (max-width:640px){.ab{grid-template-columns:1fr;grid-template-areas:"hi" "edu" "exp" "con" "skills" "soft"}}
+
+/* bez špendlíkov na nápise Portfolio */
+.hx-script .w::before,.hx-script .w::after{display:none}
+.hx-script .w:hover{transform:translateY(-.05em) rotate(-2deg)}

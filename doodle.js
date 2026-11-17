@@ -113,3 +113,47 @@
     }
   });
 })();
+
+/* pri prejdení myšou na projekt sa prehrávajú strany s vizualizáciami */
+(function () {
+  var HOVER = {"cphmarathon": ["image/_hover/cphmarathon-01.jpg", "image/_hover/cphmarathon-02.jpg", "image/_hover/cphmarathon-03.jpg"], "fruitiq": ["image/_hover/fruitiq-01.jpg", "image/_hover/fruitiq-02.jpg", "image/_hover/fruitiq-03.jpg", "image/_hover/fruitiq-04.jpg", "image/_hover/fruitiq-05.jpg", "image/_hover/fruitiq-06.jpg"], "superzoo": ["image/_hover/superzoo-01.jpg", "image/_hover/superzoo-02.jpg", "image/_hover/superzoo-03.jpg", "image/_hover/superzoo-04.jpg", "image/_hover/superzoo-05.jpg", "image/_hover/superzoo-06.jpg", "image/_hover/superzoo-07.jpg", "image/_hover/superzoo-08.jpg"], "smiechko": ["image/_hover/smiechko-01.jpg", "image/_hover/smiechko-02.jpg", "image/_hover/smiechko-03.jpg", "image/_hover/smiechko-04.jpg", "image/_hover/smiechko-05.jpg", "image/_hover/smiechko-06.jpg", "image/_hover/smiechko-07.jpg", "image/_hover/smiechko-08.jpg", "image/_hover/smiechko-09.jpg", "image/_hover/smiechko-10.jpg", "image/_hover/smiechko-11.jpg"], "mohito": ["image/_hover/mohito-01.jpg", "image/_hover/mohito-02.jpg", "image/_hover/mohito-03.jpg", "image/_hover/mohito-04.jpg", "image/_hover/mohito-05.jpg"], "poked": ["image/_hover/poked-01.jpg", "image/_hover/poked-02.jpg", "image/_hover/poked-03.jpg", "image/_hover/poked-04.jpg"], "lauma": ["image/_hover/lauma-01.jpg", "image/_hover/lauma-02.jpg", "image/_hover/lauma-03.jpg", "image/_hover/lauma-04.jpg", "image/_hover/lauma-05.jpg"], "gaudifest": ["image/_hover/gaudifest-01.jpg", "image/_hover/gaudifest-02.jpg", "image/_hover/gaudifest-03.jpg", "image/_hover/gaudifest-04.jpg"], "barhop": ["image/_hover/barhop-01.jpg", "image/_hover/barhop-02.jpg"], "nutrivictus": ["image/_hover/nutrivictus-01.jpg", "image/_hover/nutrivictus-02.jpg", "image/_hover/nutrivictus-03.jpg", "image/_hover/nutrivictus-04.jpg", "image/_hover/nutrivictus-05.jpg", "image/_hover/nutrivictus-06.jpg", "image/_hover/nutrivictus-07.jpg", "image/_hover/nutrivictus-08.jpg"], "kalendar": ["image/_hover/kalendar-01.jpg", "image/_hover/kalendar-02.jpg", "image/_hover/kalendar-03.jpg", "image/_hover/kalendar-04.jpg", "image/_hover/kalendar-05.jpg", "image/_hover/kalendar-06.jpg", "image/_hover/kalendar-07.jpg", "image/_hover/kalendar-08.jpg"], "catchles": ["image/_hover/catchles-01.jpg", "image/_hover/catchles-02.jpg", "image/_hover/catchles-03.jpg", "image/_hover/catchles-04.jpg", "image/_hover/catchles-05.jpg", "image/_hover/catchles-06.jpg", "image/_hover/catchles-07.jpg", "image/_hover/catchles-08.jpg", "image/_hover/catchles-09.jpg", "image/_hover/catchles-10.jpg", "image/_hover/catchles-11.jpg", "image/_hover/catchles-12.jpg", "image/_hover/catchles-13.jpg"], "salvik": ["image/_hover/salvik-01.jpg", "image/_hover/salvik-02.jpg", "image/_hover/salvik-03.jpg", "image/_hover/salvik-04.jpg", "image/_hover/salvik-05.jpg", "image/_hover/salvik-06.jpg", "image/_hover/salvik-07.jpg", "image/_hover/salvik-08.jpg", "image/_hover/salvik-09.jpg", "image/_hover/salvik-10.jpg", "image/_hover/salvik-11.jpg"], "posters": ["image/_hover/posters-01.jpg", "image/_hover/posters-02.jpg", "image/_hover/posters-03.jpg", "image/_hover/posters-04.jpg", "image/_hover/posters-05.jpg", "image/_hover/posters-06.jpg", "image/_hover/posters-07.jpg", "image/_hover/posters-08.jpg"], "mrazima": ["image/_hover/mrazima-01.jpg", "image/_hover/mrazima-02.jpg", "image/_hover/mrazima-03.jpg", "image/_hover/mrazima-04.jpg", "image/_hover/mrazima-05.jpg", "image/_hover/mrazima-06.jpg"], "greek": ["image/_hover/greek-01.jpg", "image/_hover/greek-02.jpg", "image/_hover/greek-03.jpg", "image/_hover/greek-04.jpg", "image/_hover/greek-05.jpg", "image/_hover/greek-06.jpg"], "alphabet": ["image/_hover/alphabet-01.jpg", "image/_hover/alphabet-02.jpg", "image/_hover/alphabet-03.jpg"], "mystical": ["image/_hover/mystical-01.jpg", "image/_hover/mystical-02.jpg", "image/_hover/mystical-03.jpg", "image/_hover/mystical-04.jpg"]};
+  if (!window.matchMedia('(hover: hover)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var cur = null, timer = null, idx = 0, flip = 0;
+  Object.keys(HOVER).forEach(function (k) { HOVER[k].forEach(function (s, i) { if (i < 2) { var im = new Image(); im.src = s; } }); });
+  function layers(box) {
+    var a = box.querySelectorAll('.hv');
+    if (a.length) return a;
+    for (var i = 0; i < 2; i++) { var im = document.createElement('img'); im.className = 'hv'; im.alt = ''; box.appendChild(im); }
+    return box.querySelectorAll('.hv');
+  }
+  function show(tile, src) {
+    var box = tile.querySelector('.img'); if (!box) return;
+    var L = layers(box), pre = new Image();
+    pre.onload = function () {
+      if (cur !== tile) return;
+      flip = 1 - flip; L[flip].src = src; L[flip].classList.add('on'); L[1 - flip].classList.remove('on');
+    };
+    pre.src = src;
+  }
+  function start(tile) {
+    stop(); var list = HOVER[tile.dataset.id]; if (!list || !list.length) return;
+    cur = tile; idx = 0; show(tile, list[0]);
+    list.forEach(function (s) { var im = new Image(); im.src = s; });
+    timer = setInterval(function () { idx = (idx + 1) % list.length; show(tile, list[idx]); }, 1100);
+  }
+  function stop() {
+    clearInterval(timer); timer = null;
+    if (cur) cur.querySelectorAll('.hv').forEach(function (x) { x.classList.remove('on'); });
+    cur = null;
+  }
+  document.addEventListener('mouseover', function (e) {
+    var t = e.target.closest && e.target.closest('.tile[data-id]');
+    if (t && t !== cur) start(t);
+  });
+  document.addEventListener('mouseout', function (e) {
+    if (!cur) return;
+    var to = e.relatedTarget;
+    if (!to || !cur.contains(to)) stop();
+  });
+})();
